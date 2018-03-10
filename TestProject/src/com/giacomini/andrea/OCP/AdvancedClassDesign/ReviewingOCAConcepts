@@ -1,0 +1,27 @@
+Reviewing OCA Concepts:
+
+	- Access Modifier
+		
+		Guarda gli esempi: com.giacomini.andrea.OCP.AdvancedClassDesign.Test.BigCat;
+						   com.giacomini.andrea.OCP.AdvancedClassDesign.Test2.Lynx;
+						   com.giacomini.andrea.OCP.AdvancedClassDesign.Test.CatAdmier;
+						   com.giacomini.andrea.OCP.AdvancedClassDesign.Test3.Mouse;
+		
+	- Overloading and Overriding;
+	
+		Guarda gli esempi: com.giacomini.andrea.OCP.AdvancedClassDesign.Test.Bobcat;
+						   com.giacomini.andrea.OCP.AdvancedClassDesign.Test.BobcatKitten;
+		
+	- Abstract Class;
+	
+		Guarda gli esempi: com.giacomini.andrea.OCP.AdvancedClassDesign.Test.Cat;
+						   com.giacomini.andrea.OCP.AdvancedClassDesign.Test.Lion;
+		
+	- Static and Final;
+	
+		Guarda gli esempi: com.giacomini.andrea.OCP.AdvancedClassDesign.Test.Cat;
+						   com.giacomini.andrea.OCP.AdvancedClassDesign.Test.Lion;
+		
+	- Imports;
+	
+		Guarda gli esempi: com.giacomini.andrea.OCP.AdvancedClassDesign.Test.ListHelper;
