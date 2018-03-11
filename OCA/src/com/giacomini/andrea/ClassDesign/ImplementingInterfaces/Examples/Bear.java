@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.ImplementingInterfaces.Examples;
+package com.giacomini.andrea.ClassDesign.ImplementingInterfaces.Examples;
 
 public class Bear implements Herbivore, Omnivore {
 
