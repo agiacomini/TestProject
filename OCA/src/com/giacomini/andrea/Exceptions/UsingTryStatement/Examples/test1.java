@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.UsingTryStatement.Examples;
+package com.giacomini.andrea.Exceptions.UsingTryStatement.Examples;
 
 public class test1 {
 

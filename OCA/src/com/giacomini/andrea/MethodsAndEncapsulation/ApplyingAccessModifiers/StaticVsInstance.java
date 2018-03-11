@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers;
+package com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers;
 
 /*
  * N.B: Un membro STATIC (metodo o campo) non può chiamare un membro (metodo o campo) d'istanza.

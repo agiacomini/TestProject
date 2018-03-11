@@ -1,11 +1,11 @@
-package com.giacomini.andrea.OCA.Exceptions.CallingMethodsThatThrowExceptions;
+package com.giacomini.andrea.Exceptions.CallingMethodsThatThrowExceptions;
 
 /*
  * N.B: Vediamo come avviene l'overriding di metodi con eccezioni nella dichirazione del metodo.
  * 		Quando una classe fa l'overriding di un metodo di una super-classe o quando implementa un metodo di una interfaccia,
  * 		non è permesso aggiungere una nuova eccezione checked alla firma del metodo.
  * 		
- * 		Guarda l'esempio: com.giacomini.andrea.OCA.Exceptions.CallingMethodsThatThrowExceptions.Examples.Bunny3;
+ * 		Guarda l'esempio: com.giacomini.andrea.Exceptions.CallingMethodsThatThrowExceptions.Examples.Bunny3;
  * 
  * 		JAVA conosce il metodo "hop()" e non gli è permesso di lanciare nessnu tipo di eccezione checked in quanto nella super
  * 		classe Hopper lo stesso metodo non ne dichiara nessuna.

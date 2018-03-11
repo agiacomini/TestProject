@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.CreatingConstructor;
+package com.giacomini.andrea.MethodsAndEncapsulation.CreatingConstructor;
 
 /*
  * N.B: E' possibile avevre più costruttori nella stessa classe, con firme diverse.

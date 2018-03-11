@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.WorkingWithVarargs;
+package com.giacomini.andrea.MethodsAndEncapsulation.WorkingWithVarargs;
 
 /*
  * N.B: E' possibile usare anche i "varargs" nella lista dei paramtri di un metodo, come se fosse un array.

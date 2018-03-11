@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers;
+package com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers;
 
 /*
  * N.B: Gli import che già conosciamo servono per importare classi, mentre gli "static import" servono per importare 
@@ -16,7 +16,7 @@ package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers
 import java.util.Arrays;
 import java.util.List;
 
-import static com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.StaticValueToImport.NUM_VALUE_1;
+import static com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.StaticValueToImport.NUM_VALUE_1;
 // static import - del metodo static "asList()" della classe "Arrays".
 import static java.util.Arrays.asList;
 

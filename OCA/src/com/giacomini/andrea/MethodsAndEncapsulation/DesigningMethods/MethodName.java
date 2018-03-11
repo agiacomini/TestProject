@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.DesigningMethods;
+package com.giacomini.andrea.MethodsAndEncapsulation.DesigningMethods;
 
 /*
  * N.B: Il nome del metodo segue le stesse regole seguite per la dichiarazione dei nomi delle variabili visto nel capitolo

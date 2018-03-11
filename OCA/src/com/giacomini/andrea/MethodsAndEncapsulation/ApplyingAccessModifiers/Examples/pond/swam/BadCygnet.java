@@ -1,6 +1,6 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.swam;
+package com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.swam;
 
-import com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.duck.MotherDuck;
+import com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.duck.MotherDuck;
 
 public class BadCygnet {
 

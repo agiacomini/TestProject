@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers;
+package com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers;
 
 /*
  * N.B: Quando un metodo è dichiarato come PROTECTED significa che è accedibile dalle classi che estendo la sua classe di appartenenza

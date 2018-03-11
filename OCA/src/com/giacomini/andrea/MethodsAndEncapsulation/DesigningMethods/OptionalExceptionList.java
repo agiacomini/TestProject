@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.DesigningMethods;
+package com.giacomini.andrea.MethodsAndEncapsulation.DesigningMethods;
 
 /*
  * N.B: La lista delle eccezioni è opzionale ma se presente viene posizionata alla fine della dichirazione del metodo.

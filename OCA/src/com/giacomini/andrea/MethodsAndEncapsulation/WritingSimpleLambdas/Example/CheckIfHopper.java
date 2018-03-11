@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.WritingSimpleLambdas.Example;
+package com.giacomini.andrea.MethodsAndEncapsulation.WritingSimpleLambdas.Example;
 
 public class CheckIfHopper implements CheckTrait {
 

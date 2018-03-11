@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.DesigningMethods;
+package com.giacomini.andrea.MethodsAndEncapsulation.DesigningMethods;
 
 /*
  * N.B: La parte finale della dichiarazione di un metodo è il corpo del metodo (eccetto per i metodi "abstract" e per le interfacce).

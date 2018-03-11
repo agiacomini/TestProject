@@ -1,7 +1,7 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.swam;
+package com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.swam;
 
-import com.giacomini.andrea.OCA.ClassDesign.CreatingAbstractClass.Examples.Swan;
-import com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.shore.Bird;
+import com.giacomini.andrea.ClassDesign.CreatingAbstractClass.Examples.Swan;
+import com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.shore.Bird;
 
 public class Swam extends Bird {								// Le classi "Swam" e "Bird" stanno in due package diversi;
 

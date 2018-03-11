@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.OverloadingMethods;
+package com.giacomini.andrea.MethodsAndEncapsulation.OverloadingMethods;
 
 /*
  * N.B: JAVA cerca sempre di trovare il metodo (overloaded) più specifico che match con la lista di parametri della chiamata. 

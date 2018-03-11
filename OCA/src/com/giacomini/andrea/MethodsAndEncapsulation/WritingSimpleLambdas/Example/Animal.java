@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.WritingSimpleLambdas.Example;
+package com.giacomini.andrea.MethodsAndEncapsulation.WritingSimpleLambdas.Example;
 
 /*
  * N.B: L'obiettivo è stampare gli animali in una lista secondo alcuni criteri.

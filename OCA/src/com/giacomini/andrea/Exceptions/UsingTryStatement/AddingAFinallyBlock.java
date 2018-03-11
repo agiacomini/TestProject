@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.UsingTryStatement;
+package com.giacomini.andrea.Exceptions.UsingTryStatement;
 
 /*
  * N.B: Il "try" statement permette di eseguire codice alla fine con una clausola "finally" indipendentemente dal fatto che

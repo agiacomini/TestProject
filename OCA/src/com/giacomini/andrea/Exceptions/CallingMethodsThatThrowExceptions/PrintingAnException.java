@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.CallingMethodsThatThrowExceptions;
+package com.giacomini.andrea.Exceptions.CallingMethodsThatThrowExceptions;
 
 /*
  * N.B: Esistono tre modi per stampare una eccezione. Si può lasciare che JAVA stampi a video, stampare solo il messaggio, 

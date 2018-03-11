@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.OverloadingMethods;
+package com.giacomini.andrea.MethodsAndEncapsulation.OverloadingMethods;
 
 /*
  * N.B: JAVA chiama sempre il metodo (overloading) più specifico che riesce.

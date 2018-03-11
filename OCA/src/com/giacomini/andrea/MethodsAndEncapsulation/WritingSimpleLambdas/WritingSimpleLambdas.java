@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.WritingSimpleLambdas;
+package com.giacomini.andrea.MethodsAndEncapsulation.WritingSimpleLambdas;
 
 /*
  * N.B: JAVA 8 ha introdotto la possibilità di scrivere codice oltre object-oriented anche in un'altro stile "Programmazione Funzionale".

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.EncapsulatingData;
+package com.giacomini.andrea.MethodsAndEncapsulation.EncapsulatingData;
 
 /*
  * N.B: L'incapsulamento è utili per prevenire che chiamate esterne alla classe possano modificare in modo errato le variabili 

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.RecognizingCommonExceptionTypes;
+package com.giacomini.andrea.Exceptions.RecognizingCommonExceptionTypes;
 
 /*
  * N.B: Data una eccezione bisogna essere in grado di ricnoscere di che tipo di eccezione si tratta e se è lanciata dalla JVM o dal

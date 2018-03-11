@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.DesigningMethods;
+package com.giacomini.andrea.MethodsAndEncapsulation.DesigningMethods;
 
 /*
  * N.B: La lista dei parametri è obbligatoria (required) ma può essere anche vuota.

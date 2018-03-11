@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers;
+package com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers;
 
 import java.util.ArrayList;
 

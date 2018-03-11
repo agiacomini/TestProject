@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.DesigningMethods;
+package com.giacomini.andrea.MethodsAndEncapsulation.DesigningMethods;
 
 /*
  * N.B: A differenza dei modificatori di accesso è possibile avere più specificatori opzionali nella stessa dichiarazione del metodo.

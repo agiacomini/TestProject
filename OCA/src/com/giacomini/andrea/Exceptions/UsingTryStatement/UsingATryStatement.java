@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.UsingTryStatement;
+package com.giacomini.andrea.Exceptions.UsingTryStatement;
 
 /*
  * N.B: Ora che si sa cosa sono le eccezioni, vediamo come gestirle. 

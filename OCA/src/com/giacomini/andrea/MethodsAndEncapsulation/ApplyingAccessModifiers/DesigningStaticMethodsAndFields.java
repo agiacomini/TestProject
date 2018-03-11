@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers;
+package com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers;
 
 /*
  * N.B: I metodi STATIC non richiedono un'istanza della classe a cui appartengono per essere usati.

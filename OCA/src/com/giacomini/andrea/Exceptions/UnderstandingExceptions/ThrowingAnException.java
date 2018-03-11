@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.UnderstandingExceptions;
+package com.giacomini.andrea.Exceptions.UnderstandingExceptions;
 
 /*
  * N.B: Ogni codice JAVA può lanciare una eccezione.

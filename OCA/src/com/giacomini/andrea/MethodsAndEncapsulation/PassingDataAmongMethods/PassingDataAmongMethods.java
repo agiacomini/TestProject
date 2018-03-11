@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.PassingDataAmongMethods;
+package com.giacomini.andrea.MethodsAndEncapsulation.PassingDataAmongMethods;
 
 /*
  * N.B: JAVA lavora per "passaggio di valore" quando passa parametri ad un metodo. 

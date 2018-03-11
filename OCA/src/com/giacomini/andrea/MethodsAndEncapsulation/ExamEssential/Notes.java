@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ExamEssential;
+package com.giacomini.andrea.MethodsAndEncapsulation.ExamEssential;
 
 public class Notes {
 

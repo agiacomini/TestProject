@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.ExamEssentials;
+package com.giacomini.andrea.Exceptions.ExamEssentials;
 
 /*
  * N.B: Una eccezione indica qualcosa di inatteso che è accaduto. Un metodo può gestire una eccezione, catturandola (catch) oppure

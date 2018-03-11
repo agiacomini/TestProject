@@ -1,6 +1,6 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.inland;
+package com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.inland;
 
-import com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.shore.Bird;
+import com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.shore.Bird;
 
 public class BirdWatcherFromAfar {							// Le classi "BirdWatcherFromAfar" e "Bird" stanno in due package diversi
 															// inoltre "BirdWatcherFromAfar" non estende (extends) la classe "Bird";

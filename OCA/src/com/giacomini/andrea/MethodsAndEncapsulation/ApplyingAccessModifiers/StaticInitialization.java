@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers;
+package com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers;
 
 /*
  * N.B: L'inizializzazione statica antepone la parola chiave STATIC al nome del membro (metodo o campo che sia).

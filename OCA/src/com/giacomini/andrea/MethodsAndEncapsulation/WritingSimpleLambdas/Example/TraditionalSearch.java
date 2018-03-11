@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.WritingSimpleLambdas.Example;
+package com.giacomini.andrea.MethodsAndEncapsulation.WritingSimpleLambdas.Example;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.UsingTryStatement;
+package com.giacomini.andrea.Exceptions.UsingTryStatement;
 
 /*
  * N.B: Fino ad ora abbiamo visto come catturare un solo tipo di eccezione. Vediamo ora cosa succede se diversi tipi

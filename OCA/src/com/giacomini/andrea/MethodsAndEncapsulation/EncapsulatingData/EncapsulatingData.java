@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.EncapsulatingData;
+package com.giacomini.andrea.MethodsAndEncapsulation.EncapsulatingData;
 
 /*
  * N.B: Come si è visto nel capitolo "BuildingBlocks" è possibile avere variabili d'istanza senza nessun modificatore d'accesso

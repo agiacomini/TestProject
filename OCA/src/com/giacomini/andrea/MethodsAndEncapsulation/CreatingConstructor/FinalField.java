@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.CreatingConstructor;
+package com.giacomini.andrea.MethodsAndEncapsulation.CreatingConstructor;
 
 /*
  * N.B: Come abbiamo già detto all'inizio "MethodsAndEncapsulation", le variabili d'istanza di tipo FINAL vengono assegnate

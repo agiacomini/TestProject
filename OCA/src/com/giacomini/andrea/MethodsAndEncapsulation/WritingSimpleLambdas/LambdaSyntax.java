@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.WritingSimpleLambdas;
+package com.giacomini.andrea.MethodsAndEncapsulation.WritingSimpleLambdas;
 
 public class LambdaSyntax {
 

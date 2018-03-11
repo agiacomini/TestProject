@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.CreatingConstructor;
+package com.giacomini.andrea.MethodsAndEncapsulation.CreatingConstructor;
 
 /*
  * N.B: Qualsiasi classe JAVA ha un costruttore anche se non è stato direttamente dichiarato.

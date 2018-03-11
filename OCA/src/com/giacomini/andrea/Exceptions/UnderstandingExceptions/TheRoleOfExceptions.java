@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.UnderstandingExceptions;
+package com.giacomini.andrea.Exceptions.UnderstandingExceptions;
 
 /*
  * N.B: Esistono due modi in cui vengono gestite le eccezioni. Un metodo può gestire il caso dell'eccezione oppure renderla responsabilità

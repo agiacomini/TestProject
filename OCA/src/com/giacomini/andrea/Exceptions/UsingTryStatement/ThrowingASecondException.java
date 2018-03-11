@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.UsingTryStatement;
+package com.giacomini.andrea.Exceptions.UsingTryStatement;
 
 import java.io.FileReader;
 import java.io.IOException;

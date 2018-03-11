@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.UnderstandingExceptions;
+package com.giacomini.andrea.Exceptions.UnderstandingExceptions;
 
 /*
  * N.B: Come abbiamo detto, un'eccezione è un evento che altera l'esecuzione del programma. JAVA possiede una super-classe

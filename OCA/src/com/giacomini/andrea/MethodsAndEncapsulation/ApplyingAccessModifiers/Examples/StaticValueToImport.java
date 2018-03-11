@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples;
+package com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples;
 
 public class StaticValueToImport {
 

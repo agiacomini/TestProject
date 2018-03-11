@@ -1,10 +1,10 @@
-package com.giacomini.andrea.OCA.Exceptions.CallingMethodsThatThrowExceptions;
+package com.giacomini.andrea.Exceptions.CallingMethodsThatThrowExceptions;
 
 /*
  * N.B: Quando si sta chiamando un metodo che può lanciare una eccezione, le regole sono le stesse come all'interno di un
  * 		metodo.
  * 
- * 		Guarda l'esempio: com.giacomini.andrea.OCA.Exceptions.CallingMethodsThatThrowExceptions.Examples.Bunny;
+ * 		Guarda l'esempio: com.giacomini.andrea.Exceptions.CallingMethodsThatThrowExceptions.Examples.Bunny;
  * 
  * 		Il problema di questo esempio è che "NoMoreCarrotsExcpetion" è una eccezione "checked". E quindi, essendo una eccezione
  * 		checked deve essere gestita o dichiarata. Il codice potrebbe compilare se il metodo "main()" cambiasse in questo modo:

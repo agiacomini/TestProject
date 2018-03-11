@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.OverloadingMethods;
+package com.giacomini.andrea.MethodsAndEncapsulation.OverloadingMethods;
 
 public class OverloadingAndVarargs {
 

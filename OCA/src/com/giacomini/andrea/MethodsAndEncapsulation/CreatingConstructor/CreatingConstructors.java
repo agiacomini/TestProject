@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.CreatingConstructor;
+package com.giacomini.andrea.MethodsAndEncapsulation.CreatingConstructor;
 
 /*
  * N.B: Al capitolo "BuildingBlocks" si è parlato di "costruttori". E' un metodo speciale che ha il nome della classe che lo contiene

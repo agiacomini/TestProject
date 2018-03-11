@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.MethodsAndEncapsulation.CreatingConstructor;
+package com.giacomini.andrea.MethodsAndEncapsulation.CreatingConstructor;
 
 /*
  * N.B: Esiste un ordine preciso nell'inizializzazione delle variabili d'istanza:
