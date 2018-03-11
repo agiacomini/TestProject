@@ -1,0 +1,90 @@
+package com.giacomini.andrea.OCP.AdvancedClassDesign.WorkingWithEnums;
+
+import com.giacomini.andrea.AdvancedClassDesign.WorkingWithEnums.Test.Season;
+import com.giacomini.andrea.AdvancedClassDesign.WorkingWithEnums.Test.Season2;
+
+/*
+ * N.B: Gli enum possono avere non solo valori. E' comune dare uno stato ad ognuno. Si guardi come esempio l'enum "Season2".
+ *    	
+ *    	Guarda gli esempi: com.giacomini.andrea.OCP.AdvancedClassDesign.WorkingWithEnums.Test.Season2;
+ *    
+ *    	Il punto e virgola finale, alla fine dell'elenco dei valori, è necessario se c'è qualsiasi cosa dietro i valori.
+ *    	Si noti il costruttore "private", infatti i costruttori in un enum devono necessariamente essere private e non public
+ *    	altrimenti si avrebbe un errore di compilazione.
+ *    	Chiamare il metodo "printExpectedVissitors()" è facile:
+ *    			
+ *    		Season2.SUMMER.printExpectedVisitors();
+ *    
+ *    	Si noti come non sembra chiamare il costruttore. Si sta dicendo solo che si vuole il valore dell'enum. La prima volta
+ *    	che si chiede il valore di un'enum, Java costruisce tutti i valori degli enum. Successivamente a chiamate successive, 
+ *    	Java ritornerà sempre il valore già precedentemente costruito.
+ *    	Detto questo, si può capire come mai il seguente codice chiamerà il costruttore solamente una volta:
+ *    
+ *      	public enum OnlyOne {
+ *      
+ *      		ONCE(true);
+ *      
+ *      		private OnlyOne(boolean b){
+ *      	
+ *      			System.out.println("constructing");
+ *      		}
+ *      
+ *      		public static void main(String[] args){
+ *      
+ *      			OnlyOne firstCall = OnlyOne.ONCE;			// stampa "constructing";
+ *      			OnlyOne secondCall = OnlyOne.ONCE;			// non stampa più niente;
+ *      		}
+ *      	}
+ *      
+ *      Guarda gli esempi: com.giacomini.andrea.OCP.AdvancedClassDesign.WorkingWithEnums.Test.OnlyOne;
+ *      
+ *      Con questa tecnica di un costruttore e di uno stato ci permette di combinare la logica con il beneficio di una lista
+ *      di valori. A volte si vuole di più. Per esempio:
+ *      
+ *        	public enum Season3 {
+ *        
+ *        		WINTER {
+ *        			public void printHours() { System.out.println("9am-3pm"); }
+ *        		}, SPRING {
+ *        			public void printHours() { System.out.println("9am-5pm"); }
+ *        		}, SUMMER {
+ *        			public void printHours() { System.out.println("9am-7pm"); }
+ *        		}, FALL {
+ *        			public void printHours() { System.out.println("9am-5pm"); }
+ *        		};
+ *        
+ *        		public abstract void printHors();
+ *        	}
+ *        
+ *      Guarda gli esempi: com.giacomini.andrea.OCP.AdvancedClassDesign.WorkingWithEnums.Test.Season3;	
+ *    	 
+ *    	Sembra che si sia creato una classe astratta con un gruppo di minuscole sotto-insieme. L'enum stesso ha un metodo abstract
+ *    	Questo significa che ogni singolo valore di enum dovrà implementare questo metodo. Se ci si dimentica anche di un solo
+ *    	valore, si avrà un errore di compilazione. Se invece non si volesse un metodo per ognuno dei valori di enum, è possibile
+ *    	creare un'implementazione di default ed eventualmente fare l'override solo per alcuni casi specifici.
+ *    
+ *     		public enum Season3 {
+ *     
+ *     			WINTER {
+ *     				public void printHours() { System.out.println("short hours"); }
+ *     			}, SUMMER {
+ *     				public void printHours() { System.out.println("long hours"); }
+ *     			}, SPRING, FALL;
+ *     
+ *     			public void printHours() { System.out.println("default hours"); }
+ *     		}
+ *     
+ *     Questo sembra migliore. E' possibile codificare solo i casi speciali e lasciare che gli altri usino l'implementazione
+ *     fornita da enum. Si noti come viene usata comunque il punto e virgola alla fine dell'elenco dei valori. Si ricorda che
+ *     questo è necessario ogni qual volta si vuole avere altro oltre il semplice valore. In questo caso per esempio si ha
+ *     un'implementazione di default del metodo.
+ *     Solo perché gli enum possono avere molti metodi, non vuol dire che siano necessari.
+ */
+
+public class AddingConstructorsFieldsAndMethods {
+
+	public static void main(String[] args){
+		
+		
+	}
+}

@@ -1,0 +1,115 @@
+package com.giacomini.andrea.ClassDesign.IntroducingClassInheritance;
+
+/*
+ * N.B: Come già detto nel capitolo "MethodsAndEncapsulation" ogni classe ha almeno un costruttore.
+ * 		Nel caso in cui nessun costruttore è stato dichiarato, il compilatore inserirà in modo automatico un costruttore
+ * 		di default senza argomenti.
+ * 
+ * 		Nel caso invece che una classe estenda una classe padre la situazione è leggermente diversa.
+ * 		In JAVA, il primo statement di ogni costruttore è o una chiamata ad un altro costruttore all'interno della stessa classe
+ * 		usando "this()", oppure una chiamata ad un costruttore nella classe padre, usando "super()".
+ * 		Se il costruttore della classe padre si aspetta degli argomenti, allora anche il costruttore "super()" si aspetta gli stessi
+ * 		argomenti.
+ * 
+ *  	Guarda gli esempi: com.giacomini.andrea.ClassDesign.IntroducingClassInheritance.Examples.Animal2;
+ *  					   com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Zebra;
+ *  
+ *  	Nella classe padre "Animal2" il primo statement del costruttore è una chiamata al costruttore padre definito in
+ *  	"java.lang.Object", il quale non prende argomenti. Nella seconda classe "Zebra", il primo statement del primo costruttore
+ *  	è una chiamata al costruttore della classe padre "Animal2", il quale si aspetta un argomento. La classe "Zebra" include
+ *  	anche un secondo costruttore senza argomenti che non chiama il costruttore padre "super()" ma invece chiama l'altro costruttore
+ *  	all'interno della medesima classe "Zebra" usando "this(4)".
+ *  
+ *   	Esattamente come per "this()" (l'abbiamo visto nel capitolo "MethodsAndEncapsulation"), anche il comando "super()" deve essere
+ *   	usato come primo statement del costruttore, altrimenti avremmo errori di compilazione.
+ *   
+ *    	Se la classe padre ha più di un costruttore, la classe figlia può usare qualsiasi costruttore padre valido.
+ *    
+ *    	Guarda gli esempi: com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Animal2;
+ *  					   com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Gorilla;
+ *    	
+ *    	Il primo costruttore della classe figlia "Gorilla" prende un argomento "age", e chiama il costruttore della classe padre
+ *    	"Animal2" che prende due argomenti, "age" e "name".
+ *    	Il secondo costruttore della classe figlia "Gorilla" non ha argomenti, e chiama il costruttore della classe padre "Animal2"
+ *    	che prende un solo argomento "age".
+ *    	Si noti che il costruttore della classe figlia "Gorilla" non deve necessariamente chiamare il costruttore della classe
+ *    	padre "Animal2" che match alla perfezione con la sua firma. Qualsiasi parent costruttore valido è accettabile.
+ *    
+ *      Fino ad ora abbiamo sempre definito classi che non chiamano in modo esplicito il costruttore parent attraverso la parola
+ *      chiave "super()". Il fatto che spiega questa situazione è che il compilatore JAVA inserisce in modo automatico una
+ *      chiamata al costruttore padre "super()" senza argomenti se il primo statement del costruttore della classe figlia non è una
+ *      chiamata esplicita al costruttore padre.
+ *      
+ *      Guarda gli esempi: com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Donkey;
+ *      				   com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Donkey2;
+ *      				   com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Donkey3;
+ *      
+ *      I tre esempi di classi "Donkey" e loro costruttori sono equivalenti perché il compilatore in modo automatico le converte 
+ *      tutte all'ultima versione "Donkey3".
+ *      
+ *      Ma cosa succese se la classe padre non ha definito un costruttore senza argomenti?
+ *      Ricordiamo che il costruttore senza argomenti non è necessariamente richiesto, ma viene inserito SOLO SE non ci sono altri
+ *      costruttori definiti nella classe. In questo caso JAVA non ci aiuta e si dovrà creare almeno un costruttore nella nostra
+ *      classe figlia che chiama esplicitamente un costruttore parent con il comando "super()".
+ *      
+ *      Guarda gli esempi: com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Mammal;
+ *      				   com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Elephant;
+ *      
+ *      In questo esempio se la classe figla "Elephant" non definisce nessun tipo di costruttore, il compilatore prova da solo
+ *      ad inserire un costruttore senza argomenti con al suo interno una chiamata al costruttore padre con il comando "super()".
+ *      Il compilatore però si ferma perché realizza che non si sono costruttori senza argomenti nella classe padre.
+ *      Per questo motivo siamo costretti ad inserire almeno un costruttore nella classe figlia (costruttore senza argomenti).
+ *      Java a questo punto, dato il costruttore senza argomenti della classe figlia "Elephant", prova ad inserire in modo automatico
+ *      il comando "super()" per richiamare il costruttore della classe padre senza argomenti.
+ *      Anche in questo caso però il compilatore ritorna un errore, perché nella classe padre non è stato definito un costruttore
+ *      senza argomenti. Per questo motivo, per risolvere la situazione, nel costruttore senza argomenti della classe figlia
+ *      saremo costretti ad usare il comando "super()" per richiamare uno specifico costruttore con argomenti della classe padre.
+ *      
+ *      In JAVA è permesso avere una sotto-classe figlia con costruttore senza argomenti anche se la classe padre invece non ha 
+ *      definito esplicitamente un costruttore senza argomenti, fornendo però nel costruttore senza argomenti della classe figlia
+ *      uno specifico mapping ad uno specifico costruttore con argomenti della classe padre (super(10)).
+ *      
+ *      Constructor Definition Rules:
+ *      
+ *      	- Il primo statement in ogni costruttore è una chiamata ad un'altro costruttore all'interno della stessa classe 
+ *      	  usando "this()", oppure una chimata ad un'altro costruttore nella classe padre usando "super()";
+ *      	- La chimata "super()" NON può essere usata dopo il primo statement del costruttore;
+ *      	- Se nessuna chiamata "super()" è dichiarata in un costruttore, JAVA inserirà una chimata ad un costruttore senza
+ *      	  argomenti "super()" come primo statement del costruttore;
+ *      	- Se la classe padre non ha un costruttore senza argomenti e la classe figlia non dichiara nessun costruttore, 
+ *      	  il compilatore lancerà un'errore e proverà ad inserire un costruttore di default senza argomenti nella classe figlia;
+ *      	- Se la classe padre non ha un costruttore di default senza argomenti, il compilatore richiede una esplicità chiamata 
+ *      	  al costruttore parent in ogni costruttore figlio;
+ *      
+ *      
+ *      CallingConstructor -
+ *      Vediamo ora qual'è la giusta sequenza delle chiamate ai vari costruttori:
+ *      
+ *      	- in JAVA il costruttore della classe padre è sempre eseguito prima del costruttore della classe figlia;
+ */
+
+public class DefiningConstructors {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+}
+
+class Primate {
+	public Primate(){
+		System.out.println("Primate");
+	}
+}
+
+class Ape extends Primate {
+	public Ape(){
+		System.out.println("Ape");
+	}
+}
+
+class Chimpanzee extends Ape {
+	public static void main (String[] args){
+		new Chimpanzee();											// Primate , Ape
+	}
+}

@@ -1,0 +1,57 @@
+package com.giacomini.andrea.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.swam;
+
+import com.giacomini.andrea.ClassDesign.CreatingAbstractClass.Examples.Swan;
+import com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.shore.Bird;
+
+public class Swam extends Bird {								// Le classi "Swam" e "Bird" stanno in due package diversi;
+
+	// 1
+	public void swim(){
+		
+		floatInWater();											// L'accesso al metodo PROTECTED "floatInWater()" della classe
+																// "Bird" è possibile in quanto "Swam" estende "Bird".
+																// In altre parole "Swam" eredita da "Bird";
+		
+		System.out.println(text);								// Lo stesso discorso vale anche per il campo "text" di "Bird";
+	}
+	
+	
+	// 2
+	public void helpOtherSwamSwim(){
+		
+		Swam other = new Swam();
+		other.floatInWater();									// Anche in questo caso l'accesso a membri PROTECTED è permesso
+																// ma a differenza del caso precedente (1) qui si ha a che fare
+																// con un riferimento che punta sempre ad un'oggetto "Swam" che
+																// eredita da "Bird";
+		System.out.println(other.text);
+	}
+	
+	// 2
+	public void helpOtherBirdSwim(){
+		
+		Bird other = new Bird();
+//		other.floatInWater();			NON COMPILA				// Questa volta invece i membri PROTECTED non sono raggiungibili
+																// in quanto si fa uso di un riferimento diretto ad un'oggetto "Bird"
+																// di un altro package e quindi questo codice non ereditare da "Bird";
+//		System.out.println(other.text); NON COMPILA
+	}
+	
+	// 3
+	public void helpOtherBird(){
+		
+		Bird other = new Swam();
+//		other.floatInWater();			NON COMPILA - questo codice non compila perché anche se si ha un'oggetto "Swam" questo viene
+//													  puntato da un riferimento di tipo "Bird" (situazione possibile perché "Swam"
+//													  estende "Bird") e con questo riferimento si cerca di accedere a membri apparteneti
+//													  a package diversi da quello a cui appartiene questo codice; 		
+		
+//		System.out.println(other.text);	NON COMPIAL - lo stesso vale anche per la variabile "text" di "Bird";
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
