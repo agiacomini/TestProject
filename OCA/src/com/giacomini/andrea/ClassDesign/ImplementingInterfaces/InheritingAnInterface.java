@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.ImplementingInterfaces;
+package com.giacomini.andrea.ClassDesign.ImplementingInterfaces;
 
 /*
  * N.B: Esistono due regole dell'ereditarietà che si dovrebbe tenere a mente quando si implementa/estende un'interfaccia:

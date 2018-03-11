@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.ImplementingInterfaces;
+package com.giacomini.andrea.ClassDesign.ImplementingInterfaces;
 
 /*
  * N.B: JAVA non permette l'ereditarietà multipla, ma permette alle classi di implemetare quasiasi numero di interfacce.

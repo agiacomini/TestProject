@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.ImplementingInterfaces;
+package com.giacomini.andrea.ClassDesign.ImplementingInterfaces;
 
 /*
  * N.B: In JAVA 8 è stato introdotto un nuovo tipo di metodo d'interfaccia, conosciuto come "Default Method".

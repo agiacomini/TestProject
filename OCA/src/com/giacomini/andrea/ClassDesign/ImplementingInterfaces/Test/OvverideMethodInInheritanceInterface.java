@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.ImplementingInterfaces.Test;
+package com.giacomini.andrea.ClassDesign.ImplementingInterfaces.Test;
 
 public class OvverideMethodInInheritanceInterface implements SuperInterface {
 	

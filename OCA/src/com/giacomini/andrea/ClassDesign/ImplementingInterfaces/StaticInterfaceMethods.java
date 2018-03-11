@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.ImplementingInterfaces;
+package com.giacomini.andrea.ClassDesign.ImplementingInterfaces;
 
 /*
  * N.B: JAVA 8 ora include anche il supporto per i metodi static all'interno di interfacce. Questi metodi sono definiti esplicitamente

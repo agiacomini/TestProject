@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.ImplementingInterfaces;
+package com.giacomini.andrea.ClassDesign.ImplementingInterfaces;
 
 /*
  * N.B: E' utile pensare ad un'interfaccia come ad un tipo specializzato di classe abstract, dal momento che condivide molte

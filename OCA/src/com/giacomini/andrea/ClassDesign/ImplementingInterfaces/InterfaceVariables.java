@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.ImplementingInterfaces;
+package com.giacomini.andrea.ClassDesign.ImplementingInterfaces;
 
 /*
  * N.B: All'interno di una interfaccia è anche possibile definire (oltre a metodi) anche delle variabili. Come i metodi d'interfaccia
