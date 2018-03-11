@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.UnderstandingJavaStatements;
+package com.giacomini.andrea.OperatorsAndStatements.UnderstandingJavaStatements;
 
 /*
  * N.B: Lo statement If-Then viene usato quando si vuole eseguire un particolare blocco di codice

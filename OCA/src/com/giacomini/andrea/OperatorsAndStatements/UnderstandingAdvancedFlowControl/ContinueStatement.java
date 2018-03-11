@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.UnderstandingAdvancedFlowControl;
+package com.giacomini.andrea.OperatorsAndStatements.UnderstandingAdvancedFlowControl;
 
 /*
  * N.B: Il CONTINUE STATEMENT permette di concludere l'esecuzione del ciclo corrente.

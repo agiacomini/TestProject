@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.BinaryArithmeticOperators;
+package com.giacomini.andrea.OperatorsAndStatements.BinaryArithmeticOperators;
 
 /*
  * N.B: Gli OPERATORI BINARI vengono usati per operazioni matematiche su variabili, creare espressioni logiche

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.UnderstandingJavaStatements;
+package com.giacomini.andrea.OperatorsAndStatements.UnderstandingJavaStatements;
 
 /*
  * N.B: Con gli operatori Java è possibile creare espressioni complesse, controllando il flusso del programma.

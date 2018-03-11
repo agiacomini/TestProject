@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.UnderstandingJavaStatements;
+package com.giacomini.andrea.OperatorsAndStatements.UnderstandingJavaStatements;
 
 /*
  * N.B: Il WHILE STATEMENT è una struttura di controllo di ripetizione (più comunemente conosciuta come "loop"),

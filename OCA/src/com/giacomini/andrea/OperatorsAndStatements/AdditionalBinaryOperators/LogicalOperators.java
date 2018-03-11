@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.AdditionalBinaryOperators;
+package com.giacomini.andrea.OperatorsAndStatements.AdditionalBinaryOperators;
 
 import java.util.Date;
 /*

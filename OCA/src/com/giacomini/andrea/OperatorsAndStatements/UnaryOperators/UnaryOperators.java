@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.UnaryOperators;
+package com.giacomini.andrea.OperatorsAndStatements.UnaryOperators;
 
 /*
  * N.B: Un'OPERATORE UNARIO è un'operatore che richiede un solo operando, o variabile.

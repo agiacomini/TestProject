@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.JavaOperators;
+package com.giacomini.andrea.OperatorsAndStatements.JavaOperators;
 
 /*
  * N.B: Un'operatore Java è uno speciale simbolo che può essere applicato ad un insieme di variabili, valori o letterali

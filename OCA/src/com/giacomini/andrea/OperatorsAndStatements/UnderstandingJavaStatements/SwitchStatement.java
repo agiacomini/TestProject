@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.UnderstandingJavaStatements;
+package com.giacomini.andrea.OperatorsAndStatements.UnderstandingJavaStatements;
 
 /*
  * N.B: Lo SWITCH STATEMENT è una struttura di decisione complessa dove un singolo valore viene valutato e 

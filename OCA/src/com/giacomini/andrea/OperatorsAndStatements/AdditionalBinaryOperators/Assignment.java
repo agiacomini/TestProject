@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.AdditionalBinaryOperators;
+package com.giacomini.andrea.OperatorsAndStatements.AdditionalBinaryOperators;
 
 /*
  * N.B: Operatore di Assegnamento (=): confronta valori aritmetici e ritorna un valore booleano. 

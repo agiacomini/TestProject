@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.AdditionalBinaryOperators;
+package com.giacomini.andrea.OperatorsAndStatements.AdditionalBinaryOperators;
 
 /*
  * N.B: Gli OPERATORI RELAZIONALI confrontano due espressioni e ritornano un valore booleano.

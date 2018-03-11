@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.UnderstandingJavaStatements;
+package com.giacomini.andrea.OperatorsAndStatements.UnderstandingJavaStatements;
 
 /*
  * N.B: Il ciclo (loop) "for" è un'altra struttura di controllo di ripetizione. 

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.UnderstandingAdvancedFlowControl;
+package com.giacomini.andrea.OperatorsAndStatements.UnderstandingAdvancedFlowControl;
 
 /*
  * N.B: E' già stato visto come nello statement "switch", lo statement "break" trasferisce/sposta il flusso di

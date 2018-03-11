@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.BinaryArithmeticOperators;
+package com.giacomini.andrea.OperatorsAndStatements.BinaryArithmeticOperators;
 
 /*
  * N.B: Come è già stato detto nel capitolo 1 "Java Building Blocks" i tipi primitive hanno una grandezza massima (data dal tipo) 

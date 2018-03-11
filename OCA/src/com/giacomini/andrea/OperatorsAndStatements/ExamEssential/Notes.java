@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.OperatorsAndStatements.ExamEssential;
+package com.giacomini.andrea.OperatorsAndStatements.ExamEssential;
 
 public class Notes {
 	
