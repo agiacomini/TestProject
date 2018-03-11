@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.ImplementingInterfaces.Examples;
+package com.giacomini.andrea.ClassDesign.ImplementingInterfaces.Examples;
 
 //public final interface WalksOnTwoLegs {} 						NON COMPILA - non è possibile usare il modificatore PRIVATE
 //																			  nella definizione di una interfaccia, per la stessa
