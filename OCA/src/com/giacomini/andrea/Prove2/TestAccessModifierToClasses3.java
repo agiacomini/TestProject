@@ -1,6 +1,6 @@
-package com.giacomini.andrea.OCA.Prove2;
+package com.giacomini.andrea.Prove2;
 
-import com.giacomini.andrea.OCA.Prove.TestAccessModifierToClasses;
+import com.giacomini.andrea.Prove.TestAccessModifierToClasses;
 
 public class TestAccessModifierToClasses3 extends TestAccessModifierToClasses{
 

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Prove;
+package com.giacomini.andrea.Prove;
 
 public class TestAbstractClass2 extends TestAbstractClass{
 

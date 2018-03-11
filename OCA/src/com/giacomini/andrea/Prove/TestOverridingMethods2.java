@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Prove;
+package com.giacomini.andrea.Prove;
 
 public class TestOverridingMethods2 extends TestOverridingMethods {
 

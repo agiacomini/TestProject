@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Prove2;
+package com.giacomini.andrea.Prove2;
 
 class TestMoreClassesInTheSameFile {
 

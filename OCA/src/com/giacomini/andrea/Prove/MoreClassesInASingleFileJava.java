@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Prove;
+package com.giacomini.andrea.Prove;
 
 class Leaf{
 	public String color;

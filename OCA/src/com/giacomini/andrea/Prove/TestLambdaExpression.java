@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Prove;
+package com.giacomini.andrea.Prove;
 
 import java.util.Arrays;
 import java.util.List;
