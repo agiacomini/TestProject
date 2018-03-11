@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.Exceptions.CallingMethodsThatThrowExceptions.Examples;
+package com.giacomini.andrea.Exceptions.CallingMethodsThatThrowExceptions.Examples;
 
 //class NoMoreCarrotsExcpetion extends Exception {}
 

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance;
+package com.giacomini.andrea.ClassDesign.IntroducingClassInheritance;
 
 /*
  * N.B: L'ereditarietà è quel processo mediante il quale una nuova sotto-classe figlia include automaticamente al suo interno qualsiasi

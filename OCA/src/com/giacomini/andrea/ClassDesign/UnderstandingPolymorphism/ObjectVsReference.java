@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism;
+package com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism;
 
 /*
  * N.B: In JAVA tutti gli oggetti sono acceduti tramite riferimento, così come uno sviluppatore non si ha mai accesso diretto

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples;
+package com.giacomini.andrea.ClassDesign.IntroducingClassInheritance.Examples;
 
 public class BactrianCamel extends Camel {
 

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance;
+package com.giacomini.andrea.ClassDesign.IntroducingClassInheritance;
 
 /*
  * N.B: Ogni classe figlia JAVA può usare qualsiasi membro PUBLIC o PROTECTED della classe padre, inclusi metodi, primitive o 
@@ -11,8 +11,8 @@ package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance;
  * 		Per riferirsi ad un membro in una classe padre, è possibiile chiamarla direttamente come la funzione di output 
  * 		"displaySharkDetails()" dell'esempio di seguito riportato.
  * 
- * 		Guarda gli esempi: com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Fish;
- * 						   com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Shark;
+ * 		Guarda gli esempi: com.giacomini.andrea.ClassDesign.IntroducingClassInheritance.Examples.Fish;
+ * 						   com.giacomini.andrea.ClassDesign.IntroducingClassInheritance.Examples.Shark;
  * 
  *  	Come si è già visto nel capitolo "MethodsAndEncapsulation", si può usare la parola chiave "this" per accedere a membri della
  *  	classe stessa. E' possibile usare la parola chiave "this" anche per accedere ai membri della classe padre che sono

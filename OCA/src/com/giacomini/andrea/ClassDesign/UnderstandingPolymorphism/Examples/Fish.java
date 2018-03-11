@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism.Examples;
+package com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism.Examples;
 
 public class Fish {
 

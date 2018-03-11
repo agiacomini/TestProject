@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.CreatingAndManipulatingStrings;
+package com.giacomini.andrea.CoreJavaAPI.CreatingAndManipulatingStrings;
 
 /*
  * N.B: Al fine di rispariamo memoria al programma (visto che le String occupano una parte consistende della momoria

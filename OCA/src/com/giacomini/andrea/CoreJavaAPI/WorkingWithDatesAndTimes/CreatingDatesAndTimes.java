@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.WorkingWithDatesAndTimes;
+package com.giacomini.andrea.CoreJavaAPI.WorkingWithDatesAndTimes;
 
 /*
  * N.B: Esattamente come per gli "ArrayList" è necessario importare le classi appartenenti al package "java.time.*"

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism;
+package com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism;
 
 /*
  * N.B: Ritorniamo solo per un momento alle ultime tre regole dell'Overriding dei metodi (ClassDesign - IntroducingClassInheritance -
@@ -7,9 +7,9 @@ package com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism;
  * 		La prima regola delle tre in questione è che un metodo overridden deve essere almeno accedibile come il metodo di 
  * 		cui fa l'overiding. Assumiamo che questa regola non sia necessaria.
  * 		
- * 		Guarda gli esempi: com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism.Examples.Animal;
- * 						   com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism.Examples.Gorilla;
- * 						   com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism.Examples.ZooKeeper;
+ * 		Guarda gli esempi: com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism.Examples.Animal;
+ * 						   com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism.Examples.Gorilla;
+ * 						   com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism.Examples.ZooKeeper;
  * 
  * 		Per questa discussione, ignoreremo il fatto che l'implementazione del metodo "getName()" nella classe "Gorilla" non compila
  * 		in quanto il metodo nella classe figlia è meno accedibile del metodo di cui fa l'overriding nella classe padre.

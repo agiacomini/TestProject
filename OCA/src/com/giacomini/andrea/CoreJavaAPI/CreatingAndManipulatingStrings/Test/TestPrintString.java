@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.CreatingAndManipulatingStrings.Test;
+package com.giacomini.andrea.CoreJavaAPI.CreatingAndManipulatingStrings.Test;
 
 public class TestPrintString {
 

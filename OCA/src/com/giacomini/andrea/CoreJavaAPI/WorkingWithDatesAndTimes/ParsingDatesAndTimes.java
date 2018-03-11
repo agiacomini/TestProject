@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.WorkingWithDatesAndTimes;
+package com.giacomini.andrea.CoreJavaAPI.WorkingWithDatesAndTimes;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

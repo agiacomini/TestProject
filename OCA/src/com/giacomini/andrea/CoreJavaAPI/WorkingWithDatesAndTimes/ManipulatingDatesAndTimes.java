@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.WorkingWithDatesAndTimes;
+package com.giacomini.andrea.CoreJavaAPI.WorkingWithDatesAndTimes;
 
 /*
  * N.B: Le classi "localDate" e "localTime" sono classi IMMUTABILI come le classi "String".

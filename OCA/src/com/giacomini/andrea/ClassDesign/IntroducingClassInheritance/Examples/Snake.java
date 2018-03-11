@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples;
+package com.giacomini.andrea.ClassDesign.IntroducingClassInheritance.Examples;
 
 import javax.naming.InsufficientResourcesException;
 

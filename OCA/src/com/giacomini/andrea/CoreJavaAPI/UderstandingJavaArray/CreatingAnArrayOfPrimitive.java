@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UderstandingJavaArray;
+package com.giacomini.andrea.CoreJavaAPI.UderstandingJavaArray;
 
 /*
  * N.B: Il modo più comune per creare un'array è il seguente: int[] numbers1 = new int[3];

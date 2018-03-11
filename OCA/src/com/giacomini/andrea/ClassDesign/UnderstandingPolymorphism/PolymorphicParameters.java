@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism;
+package com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism;
 
 /*
  * N.B: Una delle applicazioni più utili del POLIMORFISMO è l'abilità di passare istanze della sotto-classe o interfaccia
@@ -7,10 +7,10 @@ package com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism;
  * 		si sta facendo un cast da un sotto-tipo ad un super-tipo, un cast esplicito non è richiesto.
  * 		Questa proprietà è riferita come "PARAMETRI POLIFORMICI" di un metodo.
  * 
- * 		Guarda gli esempi: com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism.Examples.Reptile;
- * 						   com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism.Examples.Alligator;
- * 						   com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism.Examples.Crocodile;
- * 						   com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism.Examples.ZooWorker;
+ * 		Guarda gli esempi: com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism.Examples.Reptile;
+ * 						   com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism.Examples.Alligator;
+ * 						   com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism.Examples.Crocodile;
+ * 						   com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism.Examples.ZooWorker;
  * 
  * 		Focalizziamoci sul metodo "feed(Reptile reptile)" della classe "ZooWorker". Come si può vedere questo metodo
  * 		è in grado di gestire istanze di "Alligator" e "Crocodile" senza problemi, in quanto entrambe sono sotto-classi

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.CreatingAndManipulatingStrings;
+package com.giacomini.andrea.CoreJavaAPI.CreatingAndManipulatingStrings;
 
 /*
  * N.B: Concatenare due stringhe significa posizionarle una vicina all'altra e combinarle insieme con l'operatore (+) somma.

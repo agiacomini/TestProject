@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UderstandingJavaArray;
+package com.giacomini.andrea.CoreJavaAPI.UderstandingJavaArray;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UderstandingJavaArray;
+package com.giacomini.andrea.CoreJavaAPI.UderstandingJavaArray;
 
 /*
  * N.B: Gli array sono oggetti e naturlmente possono contenere altri oggetti, e per questo motivo

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.Test;
+package com.giacomini.andrea.ClassDesign.Test;
 
 public class TestInheritanceMethodsFromInterfaces {
 

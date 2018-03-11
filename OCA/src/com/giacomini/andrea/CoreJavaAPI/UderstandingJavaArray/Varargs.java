@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UderstandingJavaArray;
+package com.giacomini.andrea.CoreJavaAPI.UderstandingJavaArray;
 
 /*
  * N.B: Fino ad ora abbiamo visto come si presenta un'array quando viene creato e definito.

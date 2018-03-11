@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.CreatingAndManipulatingStrings;
+package com.giacomini.andrea.CoreJavaAPI.CreatingAndManipulatingStrings;
 
 public class ImportantStringMethods {
 

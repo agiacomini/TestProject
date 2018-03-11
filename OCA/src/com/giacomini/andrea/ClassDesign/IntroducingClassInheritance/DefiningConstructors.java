@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance;
+package com.giacomini.andrea.ClassDesign.IntroducingClassInheritance;
 
 /*
  * N.B: Come già detto nel capitolo "MethodsAndEncapsulation" ogni classe ha almeno un costruttore.
@@ -11,8 +11,8 @@ package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance;
  * 		Se il costruttore della classe padre si aspetta degli argomenti, allora anche il costruttore "super()" si aspetta gli stessi
  * 		argomenti.
  * 
- *  	Guarda gli esempi: com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Animal2;
- *  					   com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance.Examples.Zebra;
+ *  	Guarda gli esempi: com.giacomini.andrea.ClassDesign.IntroducingClassInheritance.Examples.Animal2;
+ *  					   com.giacomini.andrea.ClassDesign.IntroducingClassInheritance.Examples.Zebra;
  *  
  *  	Nella classe padre "Animal2" il primo statement del costruttore è una chiamata al costruttore padre definito in
  *  	"java.lang.Object", il quale non prende argomenti. Nella seconda classe "Zebra", il primo statement del primo costruttore

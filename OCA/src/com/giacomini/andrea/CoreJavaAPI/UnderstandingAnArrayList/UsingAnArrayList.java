@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UnderstandingAnArrayList;
+package com.giacomini.andrea.CoreJavaAPI.UnderstandingAnArrayList;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UnderstandingAnArrayList;
+package com.giacomini.andrea.CoreJavaAPI.UnderstandingAnArrayList;
 /*
  * N.B: A differenza di un "Array", dove è necessario sapere a priori la sua dimensione al momento della sua
  * 		creazione, un "ArrayList" può cambiare dimensione a run-time (come per lo StringBuilder).

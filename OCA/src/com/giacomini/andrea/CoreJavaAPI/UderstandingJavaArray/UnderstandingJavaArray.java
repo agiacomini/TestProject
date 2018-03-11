@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UderstandingJavaArray;
+package com.giacomini.andrea.CoreJavaAPI.UderstandingJavaArray;
 
 /*
  * N.B: Abbiamo visto che gli oggetti String e StringBuilder sono in realtà una sequenza di caratteri.

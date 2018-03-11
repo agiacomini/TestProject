@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UderstandingJavaArray;
+package com.giacomini.andrea.CoreJavaAPI.UderstandingJavaArray;
 
 /*
  * N.B: La classe "Arrays" (java.util.Arrays) ha una serie di metodi di ordinamento in grado di ordinare array

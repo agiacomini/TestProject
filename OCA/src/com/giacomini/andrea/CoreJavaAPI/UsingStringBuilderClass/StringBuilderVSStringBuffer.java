@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UsingStringBuilderClass;
+package com.giacomini.andrea.CoreJavaAPI.UsingStringBuilderClass;
 
 /*
  * N.B: Gli oggetti StringBuilder vengono usati principalmente quando c'è bisogno di concatenare insieme molti

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance;
+package com.giacomini.andrea.ClassDesign.IntroducingClassInheritance;
 
 /*
  * N.B: JAVA non permette alle variabili di essere overiding MA solo di essere hiding.

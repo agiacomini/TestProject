@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.ExamEssential;
+package com.giacomini.andrea.CoreJavaAPI.ExamEssential;
 
 public class Notes {
 	

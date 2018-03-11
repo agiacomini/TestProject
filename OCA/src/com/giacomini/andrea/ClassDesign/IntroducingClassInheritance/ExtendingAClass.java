@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance;
+package com.giacomini.andrea.ClassDesign.IntroducingClassInheritance;
 
 /*
  * N.B: In JAVA è possibile estendere una classe aggiungendo il nome della classe padre nella definizione della classe figlia

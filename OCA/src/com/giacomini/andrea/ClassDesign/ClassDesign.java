@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign;
+package com.giacomini.andrea.ClassDesign;
 
 /*
  * N.B: Vedremo ora come la strattura di una classe è una delle caratteristiche più potenti del linguaggio JAVA.

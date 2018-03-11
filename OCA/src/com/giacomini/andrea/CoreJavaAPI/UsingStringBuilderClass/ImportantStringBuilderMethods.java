@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UsingStringBuilderClass;
+package com.giacomini.andrea.CoreJavaAPI.UsingStringBuilderClass;
 
 public class ImportantStringBuilderMethods {
 

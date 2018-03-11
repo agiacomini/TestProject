@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism;
+package com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism;
 
 /*
  * N.B: La caratteristica più importante del POLIMORFISMO - e una delle principali ragioni per cui abbiamo strutture di classe -
@@ -8,8 +8,8 @@ package com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism;
  * 		su un'oggetto che overide un metodo, si prende il metodo overide, anche se la chiamata del metodo è fatta da un riferimento del
  * 		padre o all'interno della classe parent.
  * 
- *    	Guarda gli esempi: com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism.Examples.Bird2;
- *    					   com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism.Examples.Peacock;
+ *    	Guarda gli esempi: com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism.Examples.Bird2;
+ *    					   com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism.Examples.Peacock;
  *    
  * 		Come si è già visto in un esempio simile nella sezione "IntroducingClassInheritance - InheritanceMethods", il metodo
  * 		"getName()" è overiding nella classe figlia "Peacock". Più significativamente, però, il valore del metodo "getName()"

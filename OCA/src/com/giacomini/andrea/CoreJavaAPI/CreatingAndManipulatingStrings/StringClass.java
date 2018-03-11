@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.CreatingAndManipulatingStrings;
+package com.giacomini.andrea.CoreJavaAPI.CreatingAndManipulatingStrings;
 
 /*
  * N.B: Una "String" è una sequenza di caratteri. Java in particolare indicizza questi caratteri a partire da 0.

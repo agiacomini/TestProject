@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UnderstandingEquality;
+package com.giacomini.andrea.CoreJavaAPI.UnderstandingEquality;
 
 /*
  * N.B: Nel capitolo "OperatorsAndStatements" abbiamo già parlato dell'operatore == per confrontare numeri e 

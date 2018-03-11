@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UsingStringBuilderClass;
+package com.giacomini.andrea.CoreJavaAPI.UsingStringBuilderClass;
 
 /*
  * N.B: Lo StringBuilder è un'oggetto MUTABILE a differenza dell'oggetto String.

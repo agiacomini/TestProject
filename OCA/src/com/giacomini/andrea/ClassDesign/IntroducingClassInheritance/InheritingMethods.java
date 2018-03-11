@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance;
+package com.giacomini.andrea.ClassDesign.IntroducingClassInheritance;
 
 /*
  * N.B: Ereditare da una classe ci garantisce di avere accesso a membri PUBLIC e PROTECTED della classe padre(ereditata), ma

@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UnderstandingAnArrayList;
+package com.giacomini.andrea.CoreJavaAPI.UnderstandingAnArrayList;
 
 /*
  * N.B: In JAVA ogni primitiva ha una classe Wrapper associata, la quale è un tipo oggetto corrispondente alla

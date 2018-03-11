@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance;
+package com.giacomini.andrea.ClassDesign.IntroducingClassInheritance;
 
 /*
  * N.B: Il concetto di Overloading e di Overriding sono molto simili tra di loro in quanto entrambi ridefiniscono un metodo

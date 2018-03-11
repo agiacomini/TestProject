@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.UnderstandingEquality;
+package com.giacomini.andrea.CoreJavaAPI.UnderstandingEquality;
 
 public class TigerExample {
 

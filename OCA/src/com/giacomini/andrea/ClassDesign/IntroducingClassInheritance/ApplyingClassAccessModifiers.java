@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.IntroducingClassInheritance;
+package com.giacomini.andrea.ClassDesign.IntroducingClassInheritance;
 
 /*
  * N.B: Nel capitolo "MethodsAndEncapsulation" abbiamo visto come applicare i modificatori di accesso (public, default(private 

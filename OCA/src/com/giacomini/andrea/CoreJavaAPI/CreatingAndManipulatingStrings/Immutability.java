@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.CoreJavaAPI.CreatingAndManipulatingStrings;
+package com.giacomini.andrea.CoreJavaAPI.CreatingAndManipulatingStrings;
 
 /*
  * N.B: Una volta creato un'oggetto String non è più possibile modificarlo, per esempio aggiungendo o togliendo caratteri.

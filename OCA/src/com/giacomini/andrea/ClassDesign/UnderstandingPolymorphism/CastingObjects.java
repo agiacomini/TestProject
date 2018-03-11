@@ -1,4 +1,4 @@
-package com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism;
+package com.giacomini.andrea.ClassDesign.UnderstandingPolymorphism;
 
 /*
  * N.B: Nell'esempio "com.giacomini.andrea.OCA.ClassDesign.UnderstandingPolymorphism.Examples.Lemur;" si è creata una singola istanza
