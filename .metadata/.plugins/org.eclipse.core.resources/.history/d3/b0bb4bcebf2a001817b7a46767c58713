@@ -1,0 +1,90 @@
+package com.giacomini.andrea.OCP.AdvancedClassDesign.WorkingWithEnums;
+
+import com.giacomini.andrea.OCP.AdvancedClassDesign.WorkingWithEnums.Test.Season;
+import com.giacomini.andrea.OCP.AdvancedClassDesign.WorkingWithEnums.Test.Season2;
+
+/*
+ * N.B: In programmazione è comune avere un tipo che può avere solo un finito numero di valori. Una "enumeration" è come
+ * 		un'insieme fisso di costanti. In Java, un "enum" è una classe che rappresenta una enumerazione. E' molto meglio di un
+ * 		mucchio di costanti perché fornisce un controllo sicuro di tipo. Con costanti numeriche, si può passare un valore
+ * 		invalido e non scoprirlo fino al momento dell'esecuzione (runtime). Con gli "enum" invece è possibile creare un tipo "enum"
+ * 		invalido senza introdurre un'errore di compilazione.
+ * 		L'enumerazione vengono utilizzate ogni volta che si ha un'insieme di elementi i cui tipi sono noti durante la compilazione.
+ * 		Esempi comuni sono i giorni della settimana, mesi e anni, i pianeti nel sistema solare, o le carte di un mazzo.  
+ * 		Per creare un "enum" si usa la parola chiave enum al posto della parola chiave "class". Infine si elenca tutti i tipi validi
+ * 		per quell'enum:
+ * 
+ * 			public enum Season {
+ * 
+ * 				WINTER, SPRING, SUMMER, FALL;
+ * 			}
+ * 
+ * 		Dal momento che un'enum è come un'insieme di costanti, è comune usare le lettere maiuscole che si usano generalmente per le
+ * 		costanti.
+ * 		Dietro le quinte, l'enum è un tipo particolare di classe che principalmente contiene membri STATIC. Include anche alcuni
+ * 		metodi helper come "name()" che si vedrà brevemente. Usare un'enum è semplice:
+ * 
+ *   		Season s = Season.SUMMER;
+ *   		System.out.println(Season.SUMMER);				// SUMMER
+ *   		System.out.println(s == Season.SUMMER);			// true
+ *   
+ *   	Come si è visto, "enum" stampa il nome dell'enum quando il metodo "toString()" viene chiamato. Inoltre sono anche confrontabili 
+ *   	usando l'operatore "==" di uguaglianza perché loro sono come costanti STATIC FINAL.
+ *   	Un'enum fornisce un metodo per ottenere un'array di tutti i valori. Si può usare questo come qualsiasi normale array, incluso
+ *   	all'interno di un loop:
+ *   
+ *   		for(Season season: Season.value()){
+ *   
+ *   			System.out.println(season.name() + "" + season.ordinal());
+ *   		}
+ *   
+ *   	L'output mostra che ogni valore dell'enum ha un corrispondente valore int che indica la sua poszione (l'ordine di 
+ *   	dichiarazione). Il valore int rimarrà lo stesso durante tutto il programma.
+ *   
+ *   		WINTER 0
+ *   		SPRINT 1
+ *   		SUMMER 2
+ *   		FALL 3
+ *   
+ *   	Non si può comparare un int ed un enum direttamente. Bisogna ricordarsi che un enum è un tipo ma non un tipo int.
+ *   
+ *   		if (Season.SUMMER == 2) {} 		// NON COMPILA;
+ *   
+ *   	E' possinile anche creare un'enum a partire da una String. Questo è utile quando si lavora con codice vecchio. La String
+ *   	passata deve match esattamente:
+ *   
+ *   		Season s1 = Season.valueOf("SUMMER");		// SUMMER
+ *   		Season s2 = Season.valueOf("summer");		// exception
+ *   
+ *   	Il primo statement funziona correttamente assegnando l'appropriato valore di enum a "s1". Il secondo statement invece 
+ *   	incontra un problema. Non ci sono valori enum con il come "summer" (in minuscolo). Java lancia una IllegalArgumentException.
+ *   	
+ *   	Un'altra cosa che non si può fare con un enum è esterderlo.
+ *   
+ *    		public enum ExtendedSeason extedns Season { } 		// NON COMPILA
+ *    
+ *    	I valori in un enum sono tutti permessi. Non è possibile aggiunre altri a runtime estendendo l'enum.
+ *         
+ */
+
+public class WorkingWithEnums {
+
+	public static void main(String[] args){
+		
+		System.out.println(Season.SUMMER);
+		
+		System.out.println();
+		
+		for (Season season : Season.values()) {
+			System.out.println(season.name() + " " + season.ordinal());
+		} 
+		
+		System.out.println();
+		
+		Season s1 = Season.valueOf("SUMMER");
+		System.out.println(s1);
+		
+//		Season s2 = Season.valueOf("SUMMEr");					// N.B: Lancia eccezione;
+		
+	}
+}

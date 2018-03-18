@@ -1,0 +1,25 @@
+package com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.duck;
+
+import com.giacomini.andrea.OCA.MethodsAndEncapsulation.ApplyingAccessModifiers.Examples.pond.goose.Goose;
+
+public class GooseWatcher {
+
+	public void watch(){
+		Goose goose = new Goose();
+//		goose.floatInWater();						NON COMPILA - Non siamo nella classe "Goose". Il metodo "floatInWater()" è 
+//																  è dichiarato nella classe "Bird". "GooseWatcher" non è nello
+//																  stesso package di "Bird" e non estende neppure la classe "Bird".
+//																  E' la classe "Goose" che estende la classe "Bird".
+//																  E' solo la classe "Goose" (sotto-classe di "Bird") che può 
+//																  richiamare il metodo PROTECTED "floatInWater()" di "Bird" e NON
+//																  le classi che richiamano la classe "Goose" se poi si trovano anche in
+//																  package diversi.
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
