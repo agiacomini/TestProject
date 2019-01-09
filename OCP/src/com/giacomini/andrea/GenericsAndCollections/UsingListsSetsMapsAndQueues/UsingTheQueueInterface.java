@@ -31,6 +31,7 @@ N.B: Si usa una coda ("queue") quando gli elementi sono aggiunti e rimossi in un
      ereditati da "Collections". Questi metodi sono mostrati di seguito:
 
         Method                  Description                                     For queue   For stack
+        																		(FIFO)		(LIFO)
 
         boolean add(E e)        Aggiunge un'elemento alla fine delle coda       YES         NO
                                 e ritorna TRUE o lancia una eccezione;
@@ -59,12 +60,12 @@ N.B: Si usa una coda ("queue") quando gli elementi sono aggiunti e rimossi in un
 
     Eccetto che per i metodi "push()" e "pop()", tutti questi metodi appartengono all'interfaccia "Queue". I metodi "push()"
     e "pop()" sono quelli che rendono una coda una doppia-coda.
-    Come si può vedere, ci sono basicamente due insiemi di metodi. Un'insieme lancia lancia una eccezione quando qualcosa
+    Come si può vedere, ci sono basicamente due insiemi di metodi. Un'insieme lancia una eccezione quando qualcosa
     va storto. L'altro insieme invece usa un differente valore di ritorno quando qualcosa va storto. I metodi offer/poll/peek
     sono i più comuni. Questo il linguaggio standard che usano le persone quando lavorano con le code.
     Diamo un'occhiata ad un'esempio che usa alcuni di questi metodi:
 
-        12: Queue<Integer> queue = new ArrayDeque<>();
+        12: Queue<Integer> queue = new ArrayDeque<>();				// - Doppia coda pura -
         13: System.out.println(queue.offer(10));                    // TRUE
         14: System.out.println(queue.offer(4));                     // TRUE
         15: System.out.println(queue.peek());                       // 10
@@ -76,10 +77,10 @@ N.B: Si usa una coda ("queue") quando gli elementi sono aggiunti e rimossi in un
 
         queue.offer(10);    // TRUE     | 10 |
         queue.offer(4);     // TRUE     | 10 | 4 |
-        queue.speek();      // 10       | 10 | 4 |
+        queue.peek();       // 10       | 10 | 4 |
         queue.poll();       // 10       | 4 |
         queue.poll();       // 4
-        queue.speek();      // null
+        queue.peek();       // null
 
     Le linee 13 e 14 aggiungono un'elemento alla fine della coda. Alcune code sono di dimensioni limitate, il che causerebbe
     il fallimento in fase di offerta di un nuovo elemento (offer() method). Non si incontrerà però questo segnario in sede
@@ -101,7 +102,7 @@ N.B: Si usa una coda ("queue") quando gli elementi sono aggiunti e rimossi in un
         17: System.out.println(stack.pop());                   // 10
         18: System.out.println(stack.peek());                  // null
 
-    La figura di seguito riportata mostra come viene rappresentata la coda ad ogni passaggio del codice precedente.
+    La figura di seguito riportata mostra come viene rappresentata la coda (stack - LIFO) ad ogni passaggio del codice precedente.
 
         stack.push(10);             | 10 |
         stack.push(4);              | 4 | 10 |
@@ -114,7 +115,7 @@ N.B: Si usa una coda ("queue") quando gli elementi sono aggiunti e rimossi in un
     La differenza tra un "ArrayDeque" che viene usato come stack e un "ArrayDeque" che viene usato come una coda è veramente
     importante. Ricordiamo che una coda viene vista come una fila di persone. Si entra dal dietro (back) e si esce dalla parte
     anteriore (front). Uno stack invece viene visto come una pila di piatti. Si mette il piatto in cima alla pila e si
-    prende il piatto sempre in cima alla pila. Dal momento che lo stack è implementato usando "ArrayDequq", ci si riferisce
+    prende il piatto sempre in cima alla pila. Dal momento che lo stack è implementato usando "ArrayDeque", ci si riferisce
     ai termini "top" e "front" in modo intercambiabile.
     Una "LinkedList" funziona allo stesso modo di un "ArrayDeque", per questo motivo eviteremo di mostrare il codice
     per quello.

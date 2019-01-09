@@ -38,15 +38,15 @@ N.B: Si usa una lista quando si vuole una collezione ordinata che possa contenre
      si sa di dover legge più spesso piuttosto che scrivere l'"ArrayList".
      Una "LinkedList" è speciale perché implementa sia l'interfaccia "List" che "Queue". Ha tutti i metodi di "List".
      Ha anche metodi addizionali per facilitare l'aggiunta o la rimozione di elementi dall'inizio e/o fine della lista.
-     I principali benefici di una "LinkedList" sono che si può accedere, aggiungere e rimuovere lementi dall'inizion e dalla
+     I principali benefici di una "LinkedList" sono che si può accedere, aggiungere e rimuovere elementi dall'inizio e dalla
      fine della lista in un tempo costante. Il compromesso è che trattare con un indice arbitrario richiede tempo lineare.
      Questo rende una "LinkedList" una buona scelta quando la si userà come "Queue".
-     Ci sono anche due vecchie implementazioni. Torniamo indietro a quando "Vector" era l'unic ascelta se si voleva una
+     Ci sono anche due vecchie implementazioni. Torniamo indietro a quando "Vector" era l'unica scelta se si voleva una
      lista. In Java 1.2, gli "ArrayList" li hanno essenzialmente sostituiti. I "Vector" fanno la stessa cosa delgi "ArrayList"
      ma molto più lentamente. Il vantaggio di tale diminuzione di velocità è che è trade-safe (sicuro), ma come lo vedremo
      nel capitolo "7- Concurrency", c'è un modo migliore di farlo ora. Questo significa che la ragione reale per cui è
      necessario conoscere "Vector" è che del codice veramente vecchio potrebbe riferirsi ad esso.
-     Uno "Stack" è una strttura dati dove si può aggiungere e rimuovere elementi dalla cima dello stack. Pesna ad una
+     Uno "Stack" è una strttura dati dove si può aggiungere e rimuovere elementi dalla cima dello stack. Pensa ad una
      pila/catasta (stack) di carta come esempio. Come i "Vector" gli "Stack" non sono stati usati per codice nuovo in epoche diverse.
      Infatti, "Stack" estende "Vector". Se si ha bisogno di una pila/catasta è meglio usare un "ArrayDueue". Parleremo
      in maggior dettaglio di questo nella sezione "Queue".
@@ -135,11 +135,11 @@ N.B: Si usa una lista quando si vuole una collezione ordinata che possa contenre
             System.out.println(string);
         }
 
-    Fare attenzione alle differenze tra duesti tre metodi. Il metodo "hasNext()" controlla se ci siano un'altro valore
+    Fare attenzione alle differenze tra questi tre metodi. Il metodo "hasNext()" controlla se ci sia un'altro valore
     successivo in lista. In altre parole, ci dice se il metodo "next()" verrà eseguito senza lanciare nessuna eccezione.
     Il metodo "next()" muove l'"Iterator" all'elemento successivo.
 
  */
 
-public class UsingListInterface {
+public class UsingTheListInterface {
 }

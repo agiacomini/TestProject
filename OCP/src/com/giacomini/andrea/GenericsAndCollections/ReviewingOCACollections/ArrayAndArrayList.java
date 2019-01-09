@@ -33,13 +33,14 @@ N.B: Un "ArrayList" è un oggetto che contiene altri oggetti. Un "ArrayList" non
      La linea 5 converte un array in una "List". Si tratta di una implementazione di "List" che non è un "ArrayList".
      Ricorda che una "List" è come un array ri-dimensionabile. Ha senso convertire un array in una "List". Non ha senso
      invece convertire un array in un "Set". Tuttavia è ancora possibile farlo, anche se richiede un'ulteriore passo.
-     Si potrebbe convertire un array in una "List" e poi convertire la "List" in un "Set". Le linne 6 e 7 mostrano che si
-     può cambiare gli elementi sia in un array che in una "List". I cambiamento si riflettono su entrambi, dal momento
-     che sono supportati dagli stessi dati.
+     Si potrebbe convertire un array in una "List" e poi convertire la "List" in un "Set". 
+     Le linne 6 e 7 mostrano che si può cambiare gli elementi sia in un array che in una "List". 
+     I cambiamento si riflettono su entrambi, dal momento che sono supportati dagli stessi dati.
      Le implementazioni di "List" sono permesse per aggiungere il loro personale comportamento. L'implementazione usata
      quando si chiama il metodo "asList()" ha la caratteristica aggiuntiva di non essere ri-dimensionabile ma di onorare
-     tutti gli altri metodi dell'interfaccia. La linea 8 converte all'indietro la "List" in un array. Infine, la linea
-     9 mostra che la "List" non è ri-dimesnionabile perhché è sostenuta dal sottostante array.
+     tutti gli altri metodi dell'interfaccia. 
+     La linea 8 converte all'indietro la "List" in un array. 
+     Infine, la linea 9 mostra che la "List" non è ri-dimesnionabile perhché è sostenuta dal sottostante array.
 
  */
 public class ArrayAndArrayList {

@@ -2,7 +2,7 @@ package com.giacomini.andrea.GenericsAndCollections.UsingListsSetsMapsAndQueues;
 
 /*
 N.B: L'interfaccia "Collection" contiene metodi utili per lavorare con liste ("List"), insiemi ("Set") e code ("Queue").
-     Discuteremo anche delle mappe ("Maps"). Nelle sezioni seguenti, verranno presentati i metodi più comuni di queste "Coolection".
+     Discuteremo anche delle mappe ("Maps"). Nelle sezioni seguenti, verranno presentati i metodi più comuni di queste "Collection".
      Discuteremo l'argomento degli "stream" nel prossimo capitolo e discuteremo anche di una coppia di altri metodi aggiunti
      alla versione di Java 8 alla fine di questo capitolo.
      Si noterà più avanti che questo libro copre più "Collection" di quelle effettivamente necessarie per raggiungere l'obiettivo
@@ -76,7 +76,7 @@ N.B: L'interfaccia "Collection" contiene metodi utili per lavorare con liste ("L
         System.out.println(birds.isEmpty());                // FALSE
         System.out.println(birds.size());                   // 2
 
-     All'inizio la lista "birds" ha una grandezza ("size") di 0 ed è vuota. Ha una capacità che è puù grande di 0.
+     All'inizio la lista "birds" ha una grandezza ("size") di 0 ed è vuota. Ha una capacità che è più grande di 0.
      Al passo successivo sono stati aggiunti degli elementi, così la sua grandezza è diventata positiva ed la lista
      non è stata più vuota.
 

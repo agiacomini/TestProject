@@ -1,7 +1,7 @@
 package com.giacomini.andrea.GenericsAndCollections.UsingListsSetsMapsAndQueues;
 
 /*
-N.B: Si una un'insieme ("Set") quando non si vuole permettere elementi duplicati. Per esempio, si vorrebbe tenere traccia
+N.B: Si usa un'insieme ("Set") quando NON si vuole permettere elementi duplicati. Per esempio, si vorrebbe tenere traccia
      degli animali unici che si vuole vedere allo zoo. Non si è interessati all'ordine con cui si vedono questi animali,
      ma non c'è tempo per vederli più di una volta. Si vuole solo essere sicuri di vedere quegli animali veramente importanti per noi
      e rimuoverli dall'insieme una volta visti.

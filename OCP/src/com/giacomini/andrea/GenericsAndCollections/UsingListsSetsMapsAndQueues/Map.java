@@ -13,8 +13,9 @@ N.B: Si usa una "Map" quando si vuole identificare un valore attraverso una chia
 
     Non si ha bisogno di sapere il nome delle specifiche interfacce che le differenti mappe implementano, ma si ha bisogno
     si sapere the "TreeMap" è ordinata e navigabile.
-    La cosa principale che tutte e quattro le classi hanno in comune è che loro hanno tutti chiavi e valori. Oltre a questo,
-    ognuna offre differenti funzionalità. Verranno analizzate le implementazioni che si deve conoscere e i metodi disponibili.
+    La cosa principale che tutte e quattro le classi, che implementano l'interfaccia "Map", hanno in comune sono le coppie 
+    chiave/valore. Oltre a questo, ognuna offre differenti funzionalità. Verranno analizzate le implementazioni che si deve
+    conoscere e i metodi disponibili.
 
 
 
@@ -27,8 +28,8 @@ N.B: Si usa una "Map" quando si vuole identificare un valore attraverso una chia
     si potrebbe usare una "LinkedHashMap".
     Una "TreeMap" memorizza le chiavi in una struttura ordinata ad albero. Il principale beneficio di ciò è che le chiavi
     sono sempre ordinate in ordine. Il lato negativo è che aggiungere e controllare se una chiave è presente sono entrambe
-    O(log n).
-    Una "Hashtable" è come un "Vector" in quanto è veramente vecchio e "thread-sfae" e non è quello che ci si aspetta di usare.
+    operazioni di complessità O(log n) (Tempo Logaritmico, come la ricerca binaria).
+    Una "Hashtable" è come un "Vector" in quanto è veramente vecchio e "thread-safe" e non è quello che ci si aspetta di usare.
     Contiene una "t" minuscola come errore. Tutto quello che bisogna fare è essere in grado di individuarla.
     Usando una analogia "ArrayList" sta a "Vector" come "HashMap" sta a "Hashtable".
 

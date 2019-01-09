@@ -2,7 +2,7 @@ package com.giacomini.andrea.GenericsAndCollections.WorkingWithGenerics;
 
 /*
 N.B: "Legacy code" è il vecchio codice. Generalmente è codice che è scritto in un differente stile rispetto a quello
-     che si stà scrivendo oggi. In questa sezione, ci si riferiamo al codice che è stato scritto in Java 4 o precedenti
+     che si stà scrivendo oggi. In questa sezione, ci riferiamo al codice che è stato scritto in Java 4 o precedenti
      versioni, e che quindi non utilizzava i generics. Le collections scritte senza generics sono anche conosciute come
      "raw collections".
      Ricorda che usando i generics ci da sicurezza al momento della compilazione. Almeno lo fa quando tutto il codice
@@ -15,7 +15,7 @@ N.B: "Legacy code" è il vecchio codice. Generalmente è codice che è scritto i
 
             public static void main(String[] args){
 
-                // è una lista "raw type" (grezza) senza un generics;
+                // è una lista "raw type" (grezza) senza generics;
                 List unicors = new ArrayList();
                 unicorns.add(new Unicorn());
                 printDragons(unicorns);
@@ -36,7 +36,7 @@ N.B: "Legacy code" è il vecchio codice. Generalmente è codice che è scritto i
      A causa della cancellazione del tipo ("type erasure"), Java non riconosce questo come un problema fino al momento
      dell'esecuzione, quando tenta di castare un "Unicorn" in un "Dragon". Il cast è difficile perché non appare nel codice.
      Con i tipi generics, Java scrive il cast per noi.
-     Inoltre Java non rinosce che c'è un problema, sa solo che potrebbe esserci un problema. Java sa che i "raw type" (tipi di dati grezzi)
+     Inoltre Java non riconosce che c'è un problema, sa solo che potrebbe esserci un problema. Java sa che i "raw type" (tipi di dati grezzi)
      portano ad avere dei problemi e quindi ci viene presentato un warning al momento della compilazione. Un warning al momento
      della compilazione è differente da un errore in compilazione in quanto il codice continua ad essere compilabile anche
      in presenza di un warning. Ci avverte che dovremmo prestare maggiore attenzione su una parte di codice in particolare.
@@ -96,7 +96,7 @@ N.B: "Legacy code" è il vecchio codice. Generalmente è codice che è scritto i
      Il metodo "main()" usa correttamente i "generics". Il problema è che chiama un metodo "legacy" (che non usa i "generics")
      "addUnicorn" che cerca di aggiungere un "Unicorn" alla lista che invece dovrebbe contenere solo Dragon". Ma invece questo metodo
      in realtà non funziona come ci si aspettava ed aggiunge invece un "Dragon" sulla linea 8. Così quando la linea 5
-     prova a mettere quel "Dragon" in un riferimento di "Unicorn" scatta una "ClassCastExcpetion". Naturalmente, questo codice
+     prova a mettere quel "Dragon" in un riferimento di tipo "Unicorn" scatta una "ClassCastExcpetion". Naturalmente, questo codice
      ha degli avvisi di warning al momento della compilazione.
      Questo problema è abbastanza semplice. Se il codcie "legacy" non usa il giusto tipo, il codice che usa invece i generics
      continuerà a fallire a "run time". L'Autoboxing ha un differente problema:

@@ -15,7 +15,7 @@ N.B: Si è discusso degli "ArrayList" durante l'esame OCA, ora invece, in questo
      Nell'esame OCA si è già discusso degli array, come "int[]". Gli array non fanno parte del "Collections Framework".
      Dal momento che l'ordinamento e la ricerca sono simili sia negli array che nelle liste, saranno discussi entrambi
      in questo esame. Inoltre, dal momento che l'esame OCP è cumulativo ci si aspetta che si conosca come lavorare con
-     gli array. Nella sezione successiva si rivedranno i concetti chiave degli array, degli ArrayList, delle classe Wrapper,
+     gli array. Nella sezione successiva si rivedranno i concetti chiave degli array, degli ArrayList, delle classi Wrapper,
      dell'autoboxing, dell'operatore "<>" (diamond), della ricerca e dell'ordinamento.
 
  */

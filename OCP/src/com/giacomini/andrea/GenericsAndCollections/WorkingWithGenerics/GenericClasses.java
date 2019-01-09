@@ -1,8 +1,8 @@
 package com.giacomini.andrea.GenericsAndCollections.WorkingWithGenerics;
 
 /*
-N.B: E' possibile introdurre i generics nelle proprie classi personali. La sintassi per introdurre un geniric è dichiarare
-     un parametro di tipo formale tra prentesi ancgolari. Per esempio, la seguente classe chiamata "Crate" ha un variabile di tipo
+N.B: E' possibile introdurre i generics nelle proprie classi personali. La sintassi per introdurre un generic è dichiarare
+     un parametro di tipo formale tra prentesi angolari. Per esempio, la seguente classe chiamata "Crate" ha un variabile di tipo
      generic dichiarata dopo il nome della classe:
 
         public class Crate<T>{

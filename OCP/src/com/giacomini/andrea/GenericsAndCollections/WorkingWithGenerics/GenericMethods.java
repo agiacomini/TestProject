@@ -15,7 +15,7 @@ N.B: Fino a questo punto, abbiamo visto parametri di tipo formale dichiarati a l
 
      Il parametro del metodo è di tipo "T". Il tipo di ritorno è un "Crate<T>". Prima del tipo di ritorno, è stato dichiarato
      il parametro di tipo formale <T>.
-     A mneo che il metodo non ottenga il generic parametro di tipo formale dalla classe o interfaccia, il generic viene specificato
+     A meno che il metodo non ottenga il generic parametro di tipo formale dalla classe o interfaccia, il generic viene specificato
      immediatamente prima del tipo di ritorno del metodo. Questo può portare ad un interessante codice!
 
         3: public static <T> void sink(T t){}

@@ -18,7 +18,7 @@ N.B: Esattamente come le classi, un'interfaccia può dichiarare un parametro di 
             public void ship(Robot t){}
         }
 
-    Il secondo modo è creare una classe genrica. La seguente classe concreta permette al chiamante di specificare il tipo
+    Il secondo modo è creare una classe generica. La seguente classe concreta permette al chiamante di specificare il tipo
     del generics:
 
         class ShippableAbstractCrate<U> implements Shippable<U> {

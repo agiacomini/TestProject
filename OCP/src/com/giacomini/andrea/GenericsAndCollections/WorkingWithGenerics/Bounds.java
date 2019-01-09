@@ -49,7 +49,7 @@ N.B: Per ora si potrebbe aver notato che i generics non sembrano particolarmente
 
      Sulla linea 4 il compilatore ci promette che solo oggetti "Integer" saranno permessi in "numbers". Se la linea 6
      fosse compilabile, la linea 7 romperebbe la promessa che Java ci aveva fatto permettendo di mettere un'oggetto "String"
-     nella lista dal momento che "numbers" e "object" referenziano lo stesso oggetto. La cosa buona è che il compilatore
+     nella lista "numbers" dal momento che "numbers" e "object" referenziano lo stesso oggetto. La cosa buona è che il compilatore
      previene tutta questa situazione.
 
 
@@ -60,7 +60,7 @@ N.B: Per ora si potrebbe aver notato che i generics non sembrano particolarmente
      "Object[] o = new String[0];". Questo però non è il caso infatti il codice compila:
 
         Integer[] numbers = {new Integer(42)};
-        Object[] objects = numers;
+        Object[] objects = numbers;
         objects[0] = "forty two";               // throws ArrayStoreException;
 
      Anche se il codice compila, lancia una eccezione a "runtime". Con gli Arrays, Java conosce il tipo che è permesso
@@ -94,7 +94,7 @@ N.B: Per ora si potrebbe aver notato che i generics non sembrano particolarmente
 
 
      UPPER-BOUNDED WILDCARDS:
-     Proviamo a scrivere un metodo che aggiunge il totoale di una lista di numeri. Abbiamo stabilito che un tipo generico
+     Proviamo a scrivere un metodo che aggiunge il totale di una lista di numeri. Abbiamo stabilito che un tipo generico
      non può usare solo una sotto-classe:
 
         ArrayList<Number> list = new ArrayList<Integer>();          // NON COMPILA-
@@ -117,11 +117,11 @@ N.B: Per ora si potrebbe aver notato che i generics non sembrano particolarmente
             return count;
         }
 
-     Ricordiate come abbiamo continuato a dire che "type erasure" (cancellazione di tipo) porta Java a pensare che un
+     Ricordate come abbiamo continuato a dire che "type erasure" (cancellazione di tipo) porta Java a pensare che un
      tipo generico è un'"Object"? E' appena successo qui. Java converte il precedente codice in qualcosa di equivalente
      al seguente codice:
 
-        public static long total(Lisr list){
+        public static long total(List list){
 
             long count = 0;
             for (Object obj : list){
@@ -165,7 +165,7 @@ N.B: Per ora si potrebbe aver notato che i generics non sembrano particolarmente
 
      Si noti che si è usato la parola chiave "extends" piuttosto che "implements". Gli "upper bound" sono come classi
      anonime nelle quali si usa "extends" indifferentemente se si stà lavorando con una classe oppure con una interfaccia.
-     Si è già imparato che una variabile di tipo "List<Flyer>" può passata ad entrambi i metodi. Una variabile di tipo
+     Si è già imparato che una variabile di tipo "List<Flyer>" può essere passata ad entrambi i metodi. Una variabile di tipo
      "List<Goose>" può essere passata solo al metodo con l'"upper bound". Questo mostra uno dei benefici dei "generics".
      Volatili casuali non volando insieme. Si vuole che il metodo "groupOfFlyer()" sia chiamato solo con lo stesso tipo.
      Le oche (Geese) volano insieme ma non volano con il deltaplano.
@@ -228,7 +228,7 @@ N.B: Per ora si potrebbe aver notato che i generics non sembrano particolarmente
         6: excpetions.add(new FileNotFoundException());
 
      La linea 3 referenzia una "List" che potrebbe essere "List<IOException>" o "List<Exception>" o "List<Object>".
-     La linea 4 non compila perché potremmo avere una lista "List<IOException>" e l'oggetto "Excpetion" che non si adatta
+     La linea 4 non compila perché potremmo avere una lista "List<IOException>" e l'oggetto "Exception" che non si adatta
      alla lista.
      La linea 5 va bene. "IOExcpetion" può essere aggiunta a qualsiasi di quei tipi. Anche la linea 6 va bene. "FileNotFoundExcpetion"
      può anche essere aggiunta a qualsiasi di quei tre tipi. E' difficile perché "FileNotFoundExcpetion" è sotto-classe di

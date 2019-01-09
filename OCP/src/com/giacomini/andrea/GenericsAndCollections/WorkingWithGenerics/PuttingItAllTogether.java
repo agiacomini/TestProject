@@ -6,7 +6,7 @@ N.B: A questo punto si conosce tutto quello che è necessario sapere per rispond
      piace fare.
      Questa sezione sarà difficile da leggere. Contiene le domande più difficili che si possano incontrare riguardo i "generics".
      Le domande d'esame saranno probabilmente più facili da leggere di queste. Qui però si vuole testare le nostre abilità prima
-     dell'esame. In altre parole, "ninete panico". Rileggete il codice più volte se serve.
+     dell'esame. In altre parole, "niente panico". Rileggete il codice più volte se serve.
      Proviamo un esempio. Prima di tutto, dichiariamo tre classi che l'esempio userà:
 
         class A {}
@@ -27,13 +27,13 @@ N.B: A questo punto si conosce tutto quello che è necessario sapere per rispond
      istruzione OK.
      La linea 7 prova a memorizzare una lista in una dichiarazione di variabile con un "upper-bounded wildcard".
      Questa situazione è OK. Tu puoi avere "ArrayList<A>", "ArrayList<B>" o "ArrayList<C>" memorizzate in quel riferimento.
-     La linea 8 è OK. Questa volta, si ha un "lower-bound wildcard". IL tipo più basso che si può referenziare è "A".
+     La linea 8 è OK. Questa volta, si ha un "lower-bound wildcard". Il tipo più basso che si può referenziare è "A".
      Dal momento che quello è quello che si ha, il codice compila.
      La linea 9 ha un "upper-bound wildcard" che permette ad "ArrayList<B>" e "ArrayList<C>" di essere referenziati. Dal
      momento che si ha "ArrayList<A>" quello stà tentando di essere referenziato, il codice non compila.
      La linea 10 ha un "lower-bounded wildcard" il quale permette un riferimento ad "ArrayList<A>", "ArrayList<B>" e "ArrayList<Object>".
      Infine, la liena 11 permette un riferimento a qualsiasi tipo generico dal momento che ha un "unbounded wildcard".
-     Il problema è che si ha bisogno di sapere cosa sarà quale tipo quando si inizializza l'ArrayList. Non è comunque utile,
+     Il problema è che si ha bisogno di sapere cosa sarà quel tipo quando si inizializza l'ArrayList. Non è comunque utile,
      perché non è possibile aggiungere nessu elemento a quel ArrayList.
      Passiamo ora ai metodi. Stessa domanda: prova a capire come mai il codice non compila e cosa fanno. Presentiamo i
      metodi uno alla volta perché c'è ancora molto da pensare.
@@ -44,7 +44,7 @@ N.B: A questo punto si conosce tutto quello che è necessario sapere per rispond
         }
 
      Il "method1()" è un'uso perfettamento normale dei generics. Utilizza un parametro di tipo specifico del metodo, T.
-     Prende un parametro "List<T>", o qualche sotto-classe di "T", e ritorna un singolo oggetto di quel tipo "T". Per esempio,
+     Prende un parametro "List<T>", o qualunque sotto-classe di "T", e ritorna un singolo oggetto di quel tipo "T". Per esempio,
      si potrebbe chiamarlo con un parametro "List<String>" e avere una "String" come ritorno. Oppure si potrebbe chiamarlo
      con un parametro "List<Number>" ed avere come ritorno un "Number".
      Dato il precedente, si dovrebbe essere in grado di capire cos'è che non va nel codice seguente:
