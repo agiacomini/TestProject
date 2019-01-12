@@ -19,7 +19,7 @@ package com.giacomini.andrea.FunctionalProgramming.UsingVariablesInLambdas;
  * 		Using Variables In Lambdas:
  * 
  * 		Nel capitolo 1 "Advanced Class Design" si è parlato dell'idea 
- * 		"effectively final".
+ * 		"effectively final" (efficacemente).
  * 		Questo significa che se si aggiunge il modificatore "final" ad una
  * 		variabile locale, questa diventa efficacemente final. Le lambda
  * 		usano le stesse regole di accesso delle "inner classes".
@@ -28,6 +28,7 @@ package com.giacomini.andrea.FunctionalProgramming.UsingVariablesInLambdas;
  * 		"effectively final" variabili locali.
  * 
  *  	com.giacomini.andrea.FunctionalProgramming.UsingVariablesInLambdas.Test.Gorilla;
+ *      com.giacomini.andrea.FunctionalProgramming.UsingVariablesInLambdas.Test.GorillaFamily;
  *  
  *  	Sulla linea "play(() -> walk);" viene usata una variabile d'istanza nella lambda.
  *  	Sulla linea "play(() -> baby ? "hitch a ride" : "run");" viene usato il parametro
