@@ -49,8 +49,8 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
 *
 *
 *       Creating your Own Functional Interface:
-*       Java fornisce fornisce una versione "built-in" dell'interfaccia per funzioni
-*       con uno o due parametri. Cosa si ha bisogno in più? Nessun problema.
+*       Java fornisce fornisce una versione "built-in" (integrata) dell'interfaccia
+*       per funzioni con uno o due parametri. Cosa si ha bisogno in più? Nessun problema.
 *       Supponiamo che si voglia creare una interfaccia funzionale per la velocità
 *       delle ruote per ogni ruota di un triciclo. Si potrebbe creare un'interfaccia
 *       funzionale come quella di seguito:
