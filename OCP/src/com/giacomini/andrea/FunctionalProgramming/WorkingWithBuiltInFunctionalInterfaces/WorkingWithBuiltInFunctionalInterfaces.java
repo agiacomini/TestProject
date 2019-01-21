@@ -55,7 +55,7 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
 *       NOTE: Come si vedrà nel capitolo 7 "Concurrency", esiste un'interfaccia chiamata "Runnable".
 *             Viene usate per la concorrenza il più delle volte. Comunque/Tuttavia, potrebbe comparire nell'esame
 *             quando ci viene chiesto di riconoscere quale interfaccia funzionale utilizzare. Tutto quello
-*             che c'è bisogno di sapere è che "Runnable" non prende nessun parametro, ritorna qualsia tipo o
+*             che c'è da sapere è che "Runnable" non prende nessun parametro, ritorna qualsia tipo o
 *             usa generics.
 *
 *       Diamo uno sguardo a come si implementano ognuna di queste interfacce funzionali. Dal momento che sia

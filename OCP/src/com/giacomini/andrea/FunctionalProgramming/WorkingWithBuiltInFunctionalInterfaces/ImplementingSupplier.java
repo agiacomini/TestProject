@@ -15,7 +15,7 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
  *          }
  *
  *     Nell'esame OCA si è imparato che si potrebbe creare una data usando una facotry (fabbrica).
- *     Se ci si è dimentica come non c'è bisogno di preoccuparsi. Verrà spiegato ancora nel capitolo
+ *     Se si è dimenticato come si fa non c'è bisogno di preoccuparsi. Verrà spiegato ancora nel capitolo
  *     5 - "Dates, Strings, and Localization".
  *     Si può usare l'interfaccia funzionale "Supplier" per chiamare la factory:
  *
@@ -25,8 +25,8 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
  *          LocalDate d1 = s1.get();
  *          LocalDate d2 = s2.get();
  *
- *          System.out.println(d1);
- *          System.out.println(d2);
+ *          System.out.println(d1);                 // 2015-06-20
+ *          System.out.println(d2);                 // 2015-06-20
  *
  *     Questo esempio stampa due volte una data come "2015-06-20". E' ancche una buona opportunità
  *     per rivedere "static method references". Il method reference "LocalDate::now;" è usato per
