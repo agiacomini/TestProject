@@ -30,8 +30,8 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
 *           Predicate<String> p1 = String::isEmpty;
 *           Predicate<String> p2 = x -> x.isEmpty();
 *
-*           System.out.println(p1.test(""));
-*           System.out.println(p2.test(""));
+*           System.out.println(p1.test(""));            // TRUE
+*           System.out.println(p2.test(""));            // TRUE
 *
 *     Viene stampato due volte TRUE.
 *     Più interessante invece è l'interfaccia funzionale "BiPredicate". Anche questo esempio
@@ -53,14 +53,14 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
 *
 *     Defualt Method or Functional Interface:
 *     Per definizione, tutte le interfacce funzionali hanno un singolo metodo abstract.
-*     Questo non significa che loro hanno un solo metodo, al contrario. Diverse delle comuni
+*     Questo non significa che loro hanno un solo metodo, al contrario. Molte delle più comuni
 *     interfacce funzionali forniscono un numero di utili metodo di default. Non si ha bisogno
 *     di conoscerli per l'esame, ma sono molto utili quando si comincia a costruire la propria
 *     implementazione del mondo reale.
 *     Supponiamo di avere questi due predicati:
 *
 *           Predicate<String> egg = s -> s.contains("egg");
-*           Predicate<String> brow = s -> s.contains("brown");
+*           Predicate<String> brown = s -> s.contains("brown");
 *
 *     Ora vogliamo un "Predicate" per brown eggs e uno per tutti gli altri colori di egg.
 *     Si potrebbe scrivere come di seguito:

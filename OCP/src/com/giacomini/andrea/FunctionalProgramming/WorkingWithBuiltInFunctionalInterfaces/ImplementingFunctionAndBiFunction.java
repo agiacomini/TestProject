@@ -8,8 +8,8 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
 * N.B:  Una "Function" è responsabile di trasformare un parametro in un valore
 *       di tipo potenzialmente diverso, e di restituirlo. In modo simile, una
 *       "BiFunction" è responsabile di trasformare due parametri in un valore
-*       e di restituirlo. Omettendo qualsiasi metodo "default" o di tipo "static",
-*       le interfacce sono definite come di seguito:
+*       e di restituirlo. Omettendo qualsiasi altro metodo "default" o di tipo "static"
+*       dell'interfaccia, le interfacce sono definite come di seguito:
 *
 *           @FunctionalInterface
 *           public interface Function<T, R>{
@@ -21,7 +21,7 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
 *               R apply(T t, U u);
 *           }
 *
-*       Per esempio, questa funzione trasforma una "String" alla lunghezza della
+*       Per esempio, questa funzione trasforma una "String" nella lunghezza della
 *       "String" stessa.
 *
 *           Function<String, Integer> f1 = String::length;
@@ -71,7 +71,7 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
  *
  *      Qui ci sono cinque tipi di parametri. I primi quattro forniscono i tipi dei
  *      quattro motori. Idealmente questi tre dovrebbero essere dello stesso tipo, ma
- *      non si sa mai. Il quinto è ul tipo di ritorno.
+ *      non si sa mai. Il quinto è il tipo di ritorno.
  *
  *      Le interfacce "built-in" (integrate) di Java hanno lo scopo di facilitare
  *      le interfacce funzionali più comuni di cui avrete bisogno. Non si tratta
