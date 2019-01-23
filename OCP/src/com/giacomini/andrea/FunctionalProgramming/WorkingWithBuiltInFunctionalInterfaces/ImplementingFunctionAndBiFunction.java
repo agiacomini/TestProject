@@ -5,7 +5,7 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
  */
 
 /*
-* N.B:  Una "Function" è responsabile di trasformare un parametro in un valore
+* N.B:  Una "Function" è responsabile di trasformare un parametro di input in un valore
 *       di tipo potenzialmente diverso, e di restituirlo. In modo simile, una
 *       "BiFunction" è responsabile di trasformare due parametri in un valore
 *       e di restituirlo. Omettendo qualsiasi altro metodo "default" o di tipo "static"
@@ -60,26 +60,24 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
 *           }
 *
 *       Ci sono quattro tipi di parametri. I primi tre forniscono i tipi di velocità
- *      delle tre ruote. Il quarto è il tipo di ritorno. Ora supponiamo che si voglia
- *      creare una funzione per determinare quanto veloce il vostro "quad-corter" sta
- *      andando data la potenza dei quattro motori. Si potrebbe creare una interfaccia
- *      funzionale come quella di seguito:
- *
- *          interface QuadFunction<T, U, V, W, R>{
- *              R apply(T t, U u, V v, W w);
- *          }
- *
- *      Qui ci sono cinque tipi di parametri. I primi quattro forniscono i tipi dei
- *      quattro motori. Idealmente questi tre dovrebbero essere dello stesso tipo, ma
- *      non si sa mai. Il quinto è il tipo di ritorno.
- *
- *      Le interfacce "built-in" (integrate) di Java hanno lo scopo di facilitare
- *      le interfacce funzionali più comuni di cui avrete bisogno. Non si tratta
- *      affatto di un'elenc esaustivo. Ricordate che potete aggiungere qualsiasi
- *      interfaccia funzionale che volete, e Java li abbina quando usate le lambda
- *      expressiono o i "method references".
- *
+*       delle tre ruote. Il quarto è il tipo di ritorno. Ora supponiamo che si voglia
+*       creare una funzione per determinare quanto veloce il vostro "quad-corter" sta
+*       andando data la potenza dei quattro motori. Si potrebbe creare una interfaccia
+*       funzionale come quella di seguito:
 *
+*          interface QuadFunction<T, U, V, W, R>{
+*              R apply(T t, U u, V v, W w);
+*          }
+*
+*       Qui ci sono cinque tipi di parametri. I primi quattro forniscono i tipi dei
+*       quattro motori. Idealmente questi tre dovrebbero essere dello stesso tipo, ma
+*       non si sa mai. Il quinto è il tipo di ritorno.
+*
+*       Le interfacce "built-in" (integrate) di Java hanno lo scopo di facilitare
+*       le interfacce funzionali più comuni di cui avrete bisogno. Non si tratta
+*       affatto di un'elenc esaustivo. Ricordate che potete aggiungere qualsiasi
+*       interfaccia funzionale che volete, e Java li abbina quando usate le lambda
+*       expressiono o i "method references".
 *
 * */
 
