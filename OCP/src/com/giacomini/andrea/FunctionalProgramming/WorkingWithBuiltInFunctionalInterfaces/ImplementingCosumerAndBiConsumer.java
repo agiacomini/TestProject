@@ -7,7 +7,7 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
 /*
 * N.B:  Si usa un "Consumer" quando si vuole fare qualcosa con un parametro ma non si vuole
 *       ritornare nulla. "BiConsumer" fa la stessa cosa eccetto che prende due parametri.
-*       Omettendo il metdo "default", le interfacce sono definite come si seguito:
+*       Omettendo il metodo di "default", le interfacce sono definite come si seguito:
 *
 *           @FunctionalInterface
 *           public interface Consumer<T>{
@@ -37,7 +37,7 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
  *      tipo. Per esempio, si potrebbe mettere una chiave e un valore in una mappa
  *      usando questa interfaccia:
  *
- *          Map<String, Integer> map = new HashMap();
+ *          Map<String, Integer> map = new HashMap<>();
  *          BiConsumer<String, Integer> b1 = map::put;                  // method reference
  *          BiConsumer<String, Integer> b2 = (k, v) -> map.put(k, v);   // lambda expression
  *
@@ -47,8 +47,8 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
  *          System.out.println(map);
  *
  *      L'output è {chicken=7, chick=1}, il quale mostra che entrambe le implementazioni di
- *      "BiConsumer" sono state chiamate. Questa volta si è usato un riferimento ad un metodo
- *      d'istanza visto che si vuole chiamare un metodo sulla variabile locale "map".
+ *      "BiConsumer" sono state chiamate. Questa volta si è usato un "instance methods reference"
+ *      visto che si vuole chiamare un metodo sulla variabile locale "map".
  *      E' anche la prima volta che si è passato due parametri ad un method reference.
  *      Il codice per instanziare "b1" è leggermente più corto del codice per istanziare
  *      "b2". Questp è probabilmente il perché l'esame è così concentrato sul "method references".
