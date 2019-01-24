@@ -40,8 +40,8 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
 *           UnaryOperator<String> u1 = String::toUpperCase;
 *           UnaryOperator<String> u2 = x -> x.toUpperCase();
 *
-*           System.out.println(u1.apply("chirp"));
-*           System.out.println(u2.apply("chirp"));
+*           System.out.println(u1.apply("chirp"));          // CHIRP
+*           System.out.println(u2.apply("chirp"));          // CHIRP
 *
 *      Viene scritto "CHIRP" due volte. Non dobbiamo specificare il tipo di ritorno
 *      tra i "generics" perché "UnaryOperator" richiede che sia dello stesso tipo

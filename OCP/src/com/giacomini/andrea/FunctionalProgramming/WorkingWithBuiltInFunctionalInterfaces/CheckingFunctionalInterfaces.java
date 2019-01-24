@@ -7,7 +7,7 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithBuiltInFunctionalI
 /*
 * N.B:  E' veramente importante conoscere il numero dei parametri, il tipo, il valore
 *       di ritorno e il nome del metodo per ognuna delle interfacce funzionali.
-*       Ora sarebbe un buon moemento per memorizzare la tabella "4.1"
+*       Ora sarebbe un buon momento per memorizzare la tabella "4.1"
 *       ("WorkingWithBuiltInFunctionalInterfaces") se non lo si è ancora fatto.
 *       Facciamo degli esempi per impratichirci:
 *
