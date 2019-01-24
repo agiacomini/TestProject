@@ -50,8 +50,90 @@ package com.giacomini.andrea.FunctionalProgramming.UsingStream;
 *             fino a quando non viene eseguita "Terminal Operation" (operazione finale).
 *
 *           - Terminal Operation: in realtà produce un risultato. Dal momento che lo "Stream"
- *            può essere usato una sola volta, lo "Stream" non è più valido una volta che
- *            è stata eseguita la "Terminal Operation".
+*            può essere usato una sola volta, lo "Stream" non è più valido una volta che
+*            è stata eseguita la "Terminal Operation".
+*
+*       Si noti come "Intermediate Operations" sono una "black box". Quando si guarda la
+*       linea di montaggio dall'esterno, ci si preoccupa solo di cosa entra e di cosa esce.
+*       Quello che succede nel mezzo è un dettaglio implementativo.
+*       Si avrà bisogno di conoscere bene le differenze tra le operazioni "Intermediate"
+*       e "Terminal".
+*
+*       Intermediate Vs Terminal operations
+*       ------------------------------------------------------------------------
+*       | Scenario                 For Intermediate            For Terminal    |
+*       |                          Operations?                 Operations?     |
+*       |----------------------------------------------------------------------|
+*       | Required part of         NO                          YES             |
+*       | a useful pipeline?                                                   |
+*       |                                                                      |
+*       | Can exist multiple       YES                          NO             |
+*       | times in a pipeline?                                                 |
+*       |                                                                      |
+*       | Return type is a         YES                          NO             |
+*       | stream type?                                                         |
+*       |                                                                      |
+*       | Executed upon method     NO                           YES            |
+*       | call?                                                                |
+*       |                                                                      |
+*       | Stream valid after       YES                          NO             |
+*       | call?                                                                |
+*       ------------------------------------------------------------------------
+*
+*       Tipicamente una fabbrica ha un capo reparto "foreman" che osserva/tiene d'occhio il lavoro.
+*       Java serve proprio come "foreman" quando si lavoro con gli stream pipelines.
+*       Questo è un ruolo veramente importante, specialmente quando si ha a che fare
+*       con valutazioni pigre "lazy" e stream (flussi) infiniti. Si pensi alla dichiarare
+*       del flusso come all'impartire istruzioni al capo reparto. Quando il capo reparto
+*       scopre ciò che deve essere fatto, allestisce le stazioni e dice ai lavoratori
+*       quali saranno i loro compiti. Tuttavia, i lavoratori non iniziano a lavorare fino
+*       a quando il capo reparto non dice loro di iniziare. Il capo reparto aspetta
+*       fino a quando non vede il "Terminal Operation" per dare il via dei lavori. Inoltre,
+*       guarda il lavoro e ferma la linea di assemblaggio non appena il lavoro è finito.
+*       Diamo uno sguardo ad alcuni esempi. Non stiamo usando codice in questi esempi
+*       perché è veramente importante capire il concetto di "Stream pipeline" prima di iniziare
+*       a scrivere il codice. La figura 4.3 (pagina 187) mostra uno "Stream pipeline"
+*       con una "Intermediate Operation". Diamo uno sguardo a cosa succede dal punto di
+*       vista del capo reparto "foreman". Per prima cosa, guarda che la sorgente/fonte
+*       "source" stia togliendo i segnali dalla scatola. Il caporeparto allora isctruisce
+*       un lavoratore al tavolo per disfare la scatola e gli dice di aspettare un segnale.
+*       Poi il capo squadra "foreman" vede l'"Intermediate Operation" per dipingere il cartello.
+*       Istruisce un lavoratore con la vernice e gli dice di aspettare un segnale. Infine,
+*       il capo reparto "foreman" vede l'"Intermediate Operation" per mettere i cartelli in
+*       una pila. Istruisce un lavoratore per fare questa attività e grida a tutti e tre i
+*       lavoratori di iniziare.
+*       Supponiamo che ci siano due cartelli nella scatola. Al primo step (1) il primo lavoratore
+*       prende un cartello e lo consegna al secondo lavoratore. Al passo 2 il secondo
+*       lavoratore lo dipinge e lo passa al terzo lavoratore. Allo step 3 il terzo lavoratore
+*       lo prende e lo mette sulla pila. Gli step 4-6 eseguono lo stesso processo per
+*       l'altro cartello (erano 2 in totale i cartelli). Poi il capo reparto "foreman"
+*       vede che non ci sono più cartelli e chiude l'intera impresa.
+*       Il capo reparto "foreman" è intelligente. Può prendere decisioni su come fare al meglio
+*       il lavoro in base alle necessità. A titolo di esempio, esaminiamo lo stream pipeline
+*       di figura 4.4 (pagina 188):
+*
+*       Il capo reparto "foreman" vede ancora una sorgente dati da cui prelevare i cartelli
+*       dalla scatola e assegna l'attività ad un operaio da iniziare solo ad un suo comando.
+*       Sempre il capo squadra vede una "Intermediate Operation" per dipindere i cartelli
+*       e istruisce un altro operaio con l'istruzione di apsettare e poi dipingere.
+*       Poi vede uno step intermediate che ci servono solo due cartelli. Egli istruisce un
+*       lavoratore per contare i cartelli che passano e di notificargli quando il lavoratore
+*       ne ha visti passare due. Alla fine istruisce un lavoratore per il "Terminal Operation"
+*       per mettere i cartelli sulla pila.
+*       Questa volta supponiamo che ci siano dieci cartelli nella scatola. Cominciamo come
+*       l'ultima volta. Il primo cartello si fa strada lungo la pipeline. Anche il secondo
+*       cartello si fa strada lungo la pipeline. Quando il secondo lavoratore il cui compito
+*       e quello di contare vede il secondo cartello passare, lo dice subito al capo squadra
+*       (come gli era stato ordinato). Il caposquadra allora lascia che il terzo lavoratore
+*       finisca la sua attività e poi grida di fermare la linea. Non importa che ci siano
+*       altri otto cartelli nella scatola. Non ce ne bisogno, quindi è inutile dipingerli.
+*       Naturalmente tutti quanti vogliamo evitare lavoro non necessario.
+*       Allo stesso modo, il capo squadra "foreman" avrebbe fermato la linea dopo il primo
+*       cartello se la "Terminal Operation" fosse stata quella di trovare il primo cartello
+*       creato.
+*       Nelle sezioni seguenti, vedremo le tre pati di una pipeline. Discuteremo anche di
+*       tipi speciali di stream per primitive e di come stampare uno stream.
+*
 *
 * */
 
