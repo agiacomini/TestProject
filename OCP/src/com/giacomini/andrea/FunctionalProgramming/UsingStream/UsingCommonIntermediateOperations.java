@@ -89,6 +89,79 @@ package com.giacomini.andrea.FunctionalProgramming.UsingStream;
 *       --------------------------------------------------------------------------------------
 *
 *       - flatMap()
+*       Il metodo "flatMap()" prende ogni elemento presente nello "Stream" e rende tutti
+*       gli elemento che contiene elementi di primo livello in uno "Stream" singolo.
+*       Questo è utile quando si vuole rimuovere elementi vuoti dallo "Stream" o quando
+*       si desidera combinare uno "Stream" di liste. Stiamo mostrando la firma del metodo
+*       per la coerenza/consistenza con gli altri metodi, così che non si pensi che si
+*       stia nascondendo qualcosa. Non ci si aspetta che si sia in grado di leggere la firma
+*       del metodo seguente:
+*
+*           <R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper)
+*
+*       Questo linguaggio incomprensibile basicamente dice che ritorna uno "Stream" del tipo
+*       che la funzione contiene al livello inferiore. Non c'è da preoccuparsi riguardo la
+*       firma del metodo. Quello che si dovrebbe comprendere è l'esempio. Questo prende
+*       tutti gli animali e li mette tutti insieme allo stesso livello e si sbarazza
+*       delle liste vuote:
+*
+*           List<String> zero = Arrays.asList();
+*           List<String> one = Arrays.asList("Bonobo");
+*           List<String> two = Arrays.asList("Mama Gorilla", "Baby Gorilla");
+*
+*           Stream<List<String>> animals = Stream.of(zero, one, two);
+*
+*           animals.flatMap( l -> l.stream() ).forEach(System.out::println);        // Bonobo
+*                                                                                   // Mama Gorilla
+*                                                                                   // Baby Gorilla
+*
+*       N.B: Il metodo "stream()" è un metodo tipico delle "List" che permette
+*       come si può intuire dal nome di trasformare una "List" in uno "Stream".
+*
+*       Come si può notare dall'esempio, è stata rimossa la lista vuota "zero" e
+*       sono stati cambiati tutti gli elementi per ognuna delle liste per essere
+*       al livello più alto dello "Stream".
+*
+*       -----------------------------------------------------------------------------
+*
+*       - sorted()
+*       Il metodo "sorted()" ritorna una "Stream" i cui elementi sono ordinati.
+*       Esattamente come per l'ordinamento degli array, Java usa l'ordinamento
+*       naturale senza che ci si preoccupi di specificare un comparatore.
+*       Le firme dei metodi sono le seguenti:
+*
+*           Stream<T> sorted()
+*           Stream<T> sorted(Comparator<? super T> comparator)
+*
+*       Chiamando la prima delle due firme viene usato l'ordinamento di default:
+*
+*           Stream<String> s = Stream.of("brown-", "bear-");
+*           s.sorted().forEach(System.out::print);            // bear-brown-
+*
+*       Si ricordi che si può passare una lambda expression come comparatore.
+*       Per esempio, si può passare una implementazione di "Comparator":
+*
+*           Stream<String> s = Stream.of("brown bear-", "grizzly-");
+*           s.sorted(Comparator.reverseOrder()).forEach(System.out::print);   // grizzly-brown bear-
+*
+*       In questo esempio è stato passato un "Comparatore" per specificare che si
+*       voleva ordinare gli elementi in ordine inverso rispetto all'ordinamento naturale.
+*       Prondi per un'esempio più complicato? Riesci a vedere perché questo codice
+*       non compila?
+*
+*           s.sorted(Comparator::reverseOrder);         // DOES NOT COMPILE
+*
+*       Diamo ancora uno sguardo alla firma del metodo. "Comparator" è una interfaccia
+*       funzionale. Questo significa che si possono usare i "method reference" o le
+*       "lambda expression" per implementarla. L'interfaccia "Comparator" implementa
+*       un metodo che prende due parametri "String" e ritorna una primitiva "int".
+*       Però, "Comparator::reverseOrder" non fa quello. E' un riferimento ad una funzione
+*       che prende zero parametri e ritorna un "Comparator". Questo non è compatibile con
+*       l'interfaccia. Questo significa che dobbiamo usare un metodo e non un "method reference"
+*       Ne riparliamo per ricordare che si ha davvero bisogno di conoscere bene i
+*       "method reference".
+*
+*
 * */
 
 public class UsingCommonIntermediateOperations {

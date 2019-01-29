@@ -30,7 +30,7 @@ package com.giacomini.andrea.GenericsAndCollections.AdditionsInJava8;
  * 
  * 		Esistono quattro formati per il "method references":
  * 
- * 			1- metodi istatici;
+ * 			1- metodi statici;
  * 			2- metodi d'istanza su una particolare istanza;
  * 			3- metodi d'istanza su una istanza determinata a run-time;
  * 			4- costruttori;
