@@ -159,7 +159,65 @@ package com.giacomini.andrea.FunctionalProgramming.UsingStream;
 *       che prende zero parametri e ritorna un "Comparator". Questo non è compatibile con
 *       l'interfaccia. Questo significa che dobbiamo usare un metodo e non un "method reference"
 *       Ne riparliamo per ricordare che si ha davvero bisogno di conoscere bene i
-*       "method reference".
+*       "method references".
+*
+*       -----------------------------------------------------------------------------------
+*
+*       - peek()
+*       Il metodo "peek()" è l'ultimo "Intermediate Operation". E' utile per debuggare perché
+*       permette di eseguire un'operazione sullo "Stream" senza in realtà cambiare lo
+*       "Stream". La firma del metodo è la seguente:
+*
+*           Stream<T> peek(Consumer<? super T> action)
+*
+*       L'uso più comune del metodo "peek()" è quello di restituire il contenuto dello "Stream".
+*       Supponiamo di aver fatto un errore di battitura e di aver contato gli "orsi"
+*       cominciando con la lettera "g" invece della lettera "b". Siamo perplessi sul perché
+*       il conteggio è 1 invece che 2. Possiamo allora aggiungere un "peek()" per capire
+*       il perché:
+*
+*           Stream<String> stream = Stream.of("black bear", "brown bear", "grizzly");
+*           long count = stream.filter( s -> s.startWith("g") ).peek(System.out::println).count();  // grizzly
+*           System.out.println(count);                  // 1
+*
+*       N.B: Quando si lavora con una "Queue", "peek()" guarda solo il primo elemento.
+*       In uno "Stream", "peek()" guarda ogni elemento che attraversa quella parte dello
+*       "Stream" pipeline. E' come avere un operaio che prende appunti su come sta andando
+*       una particolare fase del processo.
+*
+*
+*       Danger: Changing State with peek()
+*       Si ricordi che il metodo "peek()" è inteso per eseguire un'operazione senza cambiare
+*       il risultato. Ecco di seguto un semplice "Stream" pipeline che non usa "peek()":
+*
+*           List<Integer> numbers = new ArrayList<>();
+*           List<Character> letters = new ArrayList<>();
+*
+*           numbers.add(1);
+*           letters.add('a');
+*
+*           Stream<List<?>> stream = Stream.of(numbers, letters);
+*           stream.map(List::size).forEach(System.out::print);          // 11
+*
+*       E' possibile aggiungere un'operazione "peek()":
+*
+*           StringBuilder builder = new StringBuilder();
+*           Stream<List<?>> good = Stream.of(numbers, letters);
+*           good.peek( l -> builder.append(l) ).map(List::size).forEach(System.out::print);     // 11
+*           System.out.println(builder);    // [1][a]
+*
+*       In questo esempio, si può vedere che il metodo "peek()" aggiorna una variabile
+*       "StringBuilder" che non influsice sul risultato dello "Stream" pipeline.
+*       Java non ci impedisce di scrivere codice peek() scadente:
+*
+*           Stream<List<?>> bad = Stream.of(numbers, letters);
+*           bad.peek( l -> l.remove(0) ).map(List::size).forEach(System.out::print);    // 00
+*
+*       Questo non è un buon esempio perché il metodo "peek()" stà modificando la struttura
+*       dati che è usata nello "Stream", la quale fa si che il risultato dello "Stream"
+*       pipeline sia diverso da quello che si otterrebbe se il metodo "peek()" non fosse
+*       presente.
+*
 *
 *
 * */

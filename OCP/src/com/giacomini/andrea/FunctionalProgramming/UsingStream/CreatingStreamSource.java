@@ -40,7 +40,7 @@ package com.giacomini.andrea.FunctionalProgramming.UsingStream;
  *      anche con delle "List". Non è possibile però creare una "List" infinita, il che rende
  *      gli "Stream" molto più potenti.
  *
- *          7: Stream<Double> randoms = Stream.generate(Math::random);
+ *          7: Stream<Double> randoms = Stream.generate(Math::random);          ?? Genera uno "Stream" infibito ??
  *          8: Stream<Integer> oddNumbers = Stream.iterate(1, n -> n = 2);
  *
  *      La linea 7 genera uno "Stream" di numeri randomici. Quanti numeri random? Molti più

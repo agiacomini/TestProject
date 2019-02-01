@@ -104,7 +104,7 @@ package com.giacomini.andrea.FunctionalProgramming.UsingStream;
 *       In questo esempio si trova un animale:
 *
 *           Stream<String> s = Stream.of("monkey", "gorilla", "bonono");
-*           Stream<String> infinite = Stream.generate( () -> "chimp" );
+*           Stream<String> infinite = Stream.generate( () -> "chimp" );     ?? Genera uno "Stream" infibito ??
 *           s.findAny().ifPresent(System.out::println);                     // monkey
 *           infinite.findAny().ifPresent(System.out::println);              // chimp
 *
@@ -132,7 +132,7 @@ package com.giacomini.andrea.FunctionalProgramming.UsingStream;
 *       Questo esempio controlla se i nomi degli animali iniziano con lettere:
 *
 *           List<String> list = Array.asList("monkey", "2", "chimp");
-*           Stream<String> infinite = Stream.generate( () -> "chimp" );
+*           Stream<String> infinite = Stream.generate( () -> "chimp" );         ?? Genera uno "Stream" infibito ??
 *           Predicate<String> pred  = x -> Character.isLetter(x.charAt(0));
 *           System.out.println(list.stream().anyMatch(pred));                   // TRUE
 *           System.out.println(list.stream().allMatch(pred));                   // FALSE
