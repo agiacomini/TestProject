@@ -84,6 +84,139 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithAdvancedStreamPipe
 *           Double result = ohMy.collect(Collectors.averageInt(String::length));
 *           System.out.println(result);                                           // 5.33333333333
 *
+*       Il pattern è lo stesso. Si passa un raccoglietore (collector) al metodo "collect()" e lui calcola
+*       la media per noi. Questa volta, si ha bisogno di passare una funzione per dire al collezionista
+*       su cosa fare la media. Si è usato un "Method Reference", il quale ritorna un "int" una volta
+*       eseguito. Con gli "Stream" di primitive, il risultato di una media era sempre un "double",
+*       indiffirentemente dal tipo degli elementi su cui si stava facendo la media. Per i raccoglitori si tratta
+*       di un double visto che hanno bisogno di un "Object".
+*       Spesso, ci si troverà ad interagire con codice che è stato scritto prima di Java 8. Questo significa
+*       che ci si aspetta una "Collection" piuttosto che uno "Stream". Nessun problema. E' possibile
+*       esprimersi ancora usando uno "Stream" e poi convertirlo in una "Collection" alla fine, per esempio:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           TreeSet<String> result = ohMy.filter( s -> s.startsWith("t") )
+*                                    .collect(Collector.toCollection(TreeSet::new));
+*           System.out.println(result);                     // [tigers]
+*
+*       Questa volta si hanno tutte e tre le parti dello "Stream" pipeline. "Stream.of()" è la sorgente per
+*       lo "Stream". La "Intermediate Operation" è "filter()". Infine, la "Terminal Operation" è "collect()",
+*       la quale crea un "TreeSet". Se non ci interessava l'implementazione dell'insieme (set), si avrebbe
+*       anche potuto scrivere "Collectors.toSet()".
+*       A questo punto, si dovrebbe essere in grado di usare tutti i raccoglitori (Collectors) descritti
+*       nella tabella 4.11 (Examples of grouping/partitioning collectors) eccetto "groupingBy()", "mapping()",
+ *      "partitioningBy()" e "toMap()".
+*
+*       - Collecting into Maps:
+*       Il codice del Collector (raccoglitore) che comprende le mappe può diventare lungo. Lo costruiremo
+*       lentamente. Assicuriamoci di aver capito ogni esempio prima di avanzare al prossimo. Iniziamo con
+*       un semplice esempio per creare una mappa dallo stream:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           Map<String, Integer> map = ohMy.collect( Collectors.toMap( s -> s, String::length ) );
+*           System.out.println(map);                        // {lions=5, bears=5, tigers=6}
+*
+*       Quando si crea una mappa, si ha bisogno di specificare due funzioni. La prima funzione dice al
+*       collezionista come creare la chiave. Nel nostro esempio, si è usata la "String" fornita come chiave.
+*       La seconda funzione dice al collezionista come creare il valore. Nel nostro esempio, si è usato
+*       la lughezza della "String" stessa come valore.
+*       Ristituire lo stesso valore passato ad una lambda expression è una operazione comune, per questo Java
+*       fornisce un metodo per questa attività. Si può scrivere "s -> s" come "Function.identity()". Non è
+*       più corta dell'altra e può essere più o meno chiara, quindi si consiglia di usare la soluzione
+*       più comprensibile per voi.
+*       Ora si vuole fare il contrario e mappare la lunghezza del nome dell'animale al nome stesso. La nostra
+*       prima soluzione è questa:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           Map<Integer, String> map = ohMy.collect( Collectors.toMap( String::length, k -> k ) );      // BAD
+*
+*       Esguendo questo pezzo di codice viene ritornata una eccezione simile alla seguente:
+*
+*           Exception in thread "main" java.lang.IllegalStateException: Duplicate key 5
+*               at java.util.stream.Collectors.lambda$throwingMerger$114(Collectors.java:133)
+*               at java.util.stream.Collectors$$Lambda$3/1044036744.apply (Unknown Source)
+*
+*       Cosa c'è di sbagliato? Due dei nomi degli animali hanno la stessa lunghezza. Noi non diciamo a
+*       Java cosa fare. Il collezionista (collector) dovrebbe scegliere il primo che incontra? L'ultimo
+*       che incontra? Concatenare i due? Dal momento che il collezionista (collector) non ha idea su
+*       cosa fare, "risolve" il problema lanciando una eccezione e rendendolo il nostro problema. Quanto è
+*       premuroso. Si supponga che il nostro requisiti sia quello di creare una "String" separata da virgola
+*       con i nomi degli animali. Si potrebbe scrivere qualcosa del genere:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           Map<Integer, String> map = ohMy.collect(Collectors.toMap(
+*               String::length, k -> k, (s1,s2) -> s1 + "," + s2 ));
+*           System.out.println(map);                                    // {5=lions,bears 6=tigers}
+*           System.out.println(map.getClass());                         // class java.util.HashMap
+*
+*       Succede che la mappa ritornata è un "HashMap". Il comportamento non è garantito. Supponiamo
+*       che si volgia ordinare/mandare/autorizzare che il codice ritorni un "TreeMap" invece. Nessun
+*       problema. Servireebbe solo aggiungere un riferimento a costruttore come parametro:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           TreeMap<Integer, String> map = ohMy.collect(Collectors.toMap(
+*               String::length, k -> k, (s1, s2) -> s1 + "," + s2, TreeMap::new ));
+*           System.out.println(map);                                    // {5=lions,bears, 6=tigers}
+*           System.out.println(map.getClass());                         // class java.util.TreeMap
+*
+*       Questa volto si ottiene il tipo che si è specificato. Finora con noi? Questo codice è lungo
+*       ma non particolarmente complicato. Vi avevamo promesso che il codice sarebbe stato lungo!
+*
+*
+*
+*       - Collecting Using Grouping, Partitioning and Mapping
+*       Ora supponiamo che si voglia prendere un gruppo di nomi in funzione della loro lunghezza.
+*       E' possibile fare questo dicendo che si vuole raggruppare per lunghezza:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           Map<Integer, List<String>> map = ohMy.collect(Collectors.groupingBy(String::length));
+*           System.out.println(map);                                    // {5=[lions, bears], 6=[tigers]}
+*
+*       Il metodo "groupingBy()" del collezionista (collector) dice a "collect()" che dovrebbe raggruppare
+*       tutti gli elementi dello "Stream" in una lista, organizzandoli in base alla funzione fornita.
+*       Questo rende le chiavi nella mappa il valore della funzione e i valori (della mappa) i risultati
+*       della mappa.
+*       Supponiamo che non si volgia una "List" come il valore nella mappa e si preferisca invece un "Set".
+*       Nessun problema. C'è un'altra firma di metodo che ci permette di passare "downstream collector".
+*       Questo è un secondo collezionista che fa qualcosa di speciale con i valori:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           Map<Integer, Set<String>> map = ohMy.collect(
+*               Collectors.groupingBy(String::length, Collectors.toSet()));
+*           System.out.println(map);                                    // {5=[lions,bears], 6=[tigers]}
+*
+*       E' possibile anche cambiare il tipo della mappa restituita attraverso ancora un'altro parametro.
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           TreeMap<Integer, Set<String>> map = ohMy.collect(
+*               Collectors.groupingBy(String::length, TreeMap::new, Collectors.toSet()));
+*           System.out.println(map);                                    // {5=[lions, bears], 6=[tigers]}
+*
+*       Questo è veramente flessibile. Che cosa succede se si vuole cambiare il tipo di mappa restituita
+*       ma lasciare il tipo di valori da soli come lista? Non c'è un metodo per questo specificatamente
+*       perché è facile abbastanza scrivere con quello che si ha:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           TreeMap<Integer, List<String>> map = ohMy.collect(
+*               Collectors.groupingBy(String::length, TreeMap::new, Collectors.toList()));
+*           System.out.println(map);
+*
+*       Il partizionamento è un caso speciale di raggruppamento. Con il partizionamento, ci sono solo due
+*       possibili gruppi - vero e falso. Partizionare è come slittare (dividere) una lista in due parti.
+*       Supponiamo che si stia facendo un segno per mettere fuori ogni esibizione di animale. Si hanno due
+*       grandezze di segno. Una può ospitare nomi con cinque o meno caratteri. L'altra per i nomi più lunghi.
+*       E' possibile partizionare la lista secondo quale segno si ha bisogno:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           Map<Integer, List<String>> map = ohMy.collect(
+*               Collectors.partitioningBy( s -> s.length <= 5 ));
+*           System.out.println(map);                                    // {false=[tigers], true=[lions,bears]}
+*
+*       Qui si è passato un predicato
+*
+*
+*
+*
 * */
 
 public class CollectingResults {
