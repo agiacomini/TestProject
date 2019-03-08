@@ -212,7 +212,92 @@ package com.giacomini.andrea.FunctionalProgramming.WorkingWithAdvancedStreamPipe
 *               Collectors.partitioningBy( s -> s.length <= 5 ));
 *           System.out.println(map);                                    // {false=[tigers], true=[lions,bears]}
 *
-*       Qui si è passato un predicato
+*       Qui si è passato un "Predicate" con la logica per cui ogni nome di animale appartiene al gruppo.
+*       Ora supponiamo che si è capito come usare un carattere diverso, e sette caratteri possono ora adattarsi
+*       al segno più piccolo. Nessun problema. E' necessario solo cambiare il predicato:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           Map<Boolean, List<String>> map = ohMy.collect(
+*               Collectors.partitioningBy( s -> s.length() <= 7 ));
+*           System.out.println(map);                                    // {false=[], true=[lions, tigers, bears]}
+*
+*       Si noti come ci siano ancora due chiavi nella mappa - una per ogni valore "boolean". Succede cosi
+*       che uno dei valori è una lista vuota, ma è ancora lì. Come per il metodo "groupingBy()" è possibile
+*       cambiare il tipo della "List" con qualcos'altro:
+*
+*
+*
+*      N.B: - Debugging Complicated Generics: -----------------------------------------------------
+*      Quando si lavora con il metodo "collect()" ci sono spesso molti livelli di generics che rendono gli errori
+*      di compilazione inleggibili. Di seguito tre utili tecniche per trattare con questa situazione:
+*
+*           . Inizia con uno statement semple e poi continua ad aggiungerla. Facendo una piccola modifica
+*             alla volta si saprà quale pezzo di codice avrà introdotto l'errore;
+*           . Estrarre parti dello statement in statement separati. Per esempio, prova a scrivere
+*
+*                   Collectors.groupingBy(String::length, Collectors.counting());
+*
+*             Se compila si sa che il problema è altrove. Se non viene compilato invece si ha uno statement
+*             molto più piccolo per la rioluzione del problema;
+*
+*          . Usa i generics wildcard per il tipo di ritorno dello statement finale, per esempio Map<?,?>.
+*            Se questa modifica da sola permette la compilazione del codice, si sa allora che il problema
+*            è che il tipo di ritorno non è quello che ci si aspetta;
+*       -----------------------------------------------------------------------------------------------
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           Map<Boolean, Set<String>> map = ohMy.collect(
+*               Collectors.partitioningBy( s -> s.length() <= 7, Collectors.toSet() ));
+*           System.out.println(map);                                    // {false=[], true=[lions, tigers, bears]}
+*
+*       Diversamente da "groupingBy()" non è possibile cambiare il tipo di "Map" che viene ritornata.
+*       Comunque, ci sono solo due chiavi nella mappa, quindi è davvero importante quale tipo di mappa
+*       usare? Invece di usare il "collectr" a valle per specificare il tipo, è possibile usare uno dei tipi
+*       di "collector" che si è già mostrato. Per esempio, è possibile raggruppare in base alla lunghezza
+*       del nome dell'animale per vedere quanti per ogni lunghezza si hanno:
+*
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           Map<Integer, Long> map = ohMy.collect(Collectors.groupingBy(
+*               String::length, Collectors.counting()));
+*           System.out.println(map);                                    // {5=2, 6=1}
+*
+*       Infine, c'è un "mapping()" collector che ci permette di scendere di livello ed aggiungere
+*       un'altro collector. Supponiamo che si volgia prendere la prima lettera del primo animale
+*       in ordine alfabetico di ogni lunghezza. Perché? Forse per un compionamento casuale.
+*       Anche gli esempi di questa parte dell'esame sono abbastanza artificiosi. Scriveremo
+*       quanto segue:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           Map<Integer,Optional<Character>> map = ohMy.collect(
+*               Collectors.groupingBy(
+*                   String::length,
+*                   Collectors.mapping( s -> s.chart(0),
+*                       Collectors.minBy(Comparator.naturalOrder()))));
+*           System.out.println(map);                                    // {5=Optional[b], 6=Optional[t]}
+*
+*       Non vi diremo che questo codice è facile da leggere. Vi diremo che è la cosa più
+*       complicata che vi aspetterete di vedere all'esame. Confrontandolo con l'esempio
+*       precedente si può notare come è stato sostituito il "Collectors.counting()" con il
+*       "Collectors.mapping()". Si da il caso che "mapping()" prenda due parametri: la funzione
+*       per il valore e come raggrupparlo ulteriormente. Si potrebbero vedere "collector()" usati
+*       con uno static import per rendere il codice più corto. Questo significa che si potrebbe
+*       vedere qualcosa del genere:
+*
+*           Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+*           Map<Integer, Optional<Character>> map = ohMy.collect(
+*               groupingBy(
+*                   String::length,
+*                   mapping( s -> s.charAt(0),
+*                       minBy(Comparator.naturalOrder()))));
+*           System.out.println(map);                                // {5=Optional[b], 6=Optional[t]}
+*
+*       Questo codice fa esattamente la stessa cosa dell'esempio precedente. Questo significa che
+*       è importante riconoscere il nome del collector perché si potrebbe non avere il nome
+*       della classe "Collectors" per riconoscerli, come in questo ultimo caso.
+*       C'è un altro collector chiamato "reducing()". Non c'è bisogno di saperlo per l'esame. Si tratta
+*       di una riduzione generale nel caso in cui tutti i collectors precedenti non soddisfino
+*       le vostre esigenze.
 *
 *
 *
