@@ -51,10 +51,10 @@ package com.giacomini.andrea.FunctionalProgramming.ExamEssential;
 *           - IntStream
 *           - LongStream
 *
-*       In aggiunta ai metodi classici degli "Stream" questi stream di primitive hanno metodi come
-*       "range()" e "rangeClosed()". La chiamata del metodo "range(1,10)" su uno Stream di tipo
-*       "IntStream" e "LongStream" crea uno "Stream" di primitive da 1 a 9. Al contrario, il
-*       metodo "rangeClosed(1,10)" crea uno "Stream" di primitive da 1 a 10.
+*       In aggiunta ai metodi classici degli "Stream", gli stream di primitive "IntStream" e "LongStream"
+*       hanno metodi come "range()" e "rangeClosed()". La chiamata del metodo "range(1,10)" su uno
+*       Stream di tipo "IntStream" e "LongStream" crea uno "Stream" di primitive da 1 a 9. Al contrario,
+*       il metodo "rangeClosed(1,10)" crea uno "Stream" di primitive da 1 a 10.
 *       Gli "Stream" di primitive hanno operazioni matematiche inclusi i metodi "average()", "max()" e
 *       "sum()". Inoltre hanno il metodo "summaryStatistics()" per ottenere molte statistiche in una
 *       chiamata sola. Ci sono anche interfacce funzionali specifiche per gli "Stream". Ad eccezione
@@ -72,6 +72,70 @@ package com.giacomini.andrea.FunctionalProgramming.ExamEssential;
 *       Infine, si ricordi che gli "Stream" sono lazy evaluated. Prendono le lambda expressione o i
 *       "method references" come parametri, che si verificano successivamente quando il metodo
 *       viene eseguito.
+*
+*       Exam Essential:
+*       Identificare la corretta interfaccia funzionale dato il numero di parametri, il tipo di ritorno
+*       e il nome del metodo - e viceversa. Le più comuni interfacce funzionali sono "Supplier",
+*       "Consumer", "Function" e "Predicate". Esistono anche le versioni binarie (con due parametri
+*       piuttosto che uno) e le versioni di primitive di molti di questi metodi.
+*
+*       Scrivere codice che usa "Optional". Per creare un "Optional" si usa "Optional.empty()" oppure
+*       "Optional.of()". Viene recuperato frequentemente usando i metodi "isPresent()" e "get()".
+*       Alternativamente, ci sono i metodi funzionali "isPresent()" e "ElseGet()".
+*
+*       Riconoscere quali operazioni causano l'esecuzione di uno "Stream" pipeline. Le "Intermediate
+*       Operation" non vengono eseguite fino a quando non vengono incontrare le "Terminal Operation".
+*       Se non ci sono "Terminal Operation" nella pipeline, uno "Stream" viene ritornato ma non eseguito.
+*       Esempi di "Terminal Operation" includono "collect()", "forEach()", "min()" e "reduce()".
+*
+*       Determinare quali "Terminal Operation" sono riduzioni. Le riduzioni usano tutti gli elementi
+*       dello "Stream" nel determinare il risultato. Le riduzioni che si devono ricordare assolutamente
+*       sono "collect()", "count()", "max()", "min()" e "reduce()". Una riduzione mutabile viene
+*       raccolta nello stesso oggetto da cui parte. Il metodo "collect()" è una riduzione mutabile.
+*
+*       Scrivere codice per le più comuni "Intermediate Operations". Il metodo "filter()" ritorna
+*       uno "Stream" filtrato su un "Predicate". Il metodo "map()" ritorna uno "Stream" trasformando
+*       ogni singolo elemento in un'altro attraverso una "Function". Il metodo "flatMap()" appiattisce
+*       gli "Stream" annidati in un unico livello e rimuove gli "Stream" vuoti.
+*
+*       Confrontare gli "Stream di primitve" con gli "Stream". Di seguito tre classi di Stream di
+*       primitive: "DoubleStream", "IntStream" e "LongStream". Ci sono anche tre classi "Optional" di
+*       primitive: "OptionalDouble", "OptionalInt" e "OptionalLong". Ci sono un buon numero di
+*       interfacce funzionali per primitive. A parte "BooleanSupplier", tutti coinvolgono primitive
+*       "double", "int" e "long".
+*
+*       Convertire un tipo di "Stream" di primitive in un'altrp tipo di "Stream" di primitive.
+*       Normalmente quanto si mappa, si chiama semplicemente il metodo "map()". Quando si cambia la
+*       classe usata per lo "Stream" è necessario un metodo differente. Per convertire verso uno
+*       "Stream" si usa "mapToObj()". Per convertire verso un "DoubleStream" si usa un metodo
+*       "mapToDouble()". Per convertire verso un "IntStream()" si usa il metodo "mapToInt()".
+*       Per convertire verso un "LongStream" si usa il metodo "mapToLong()".
+*
+*       Tradurre la codifica fatta con i "Method References" in lambda expression e viceversa.
+*       Tutto il codice scritto con i "Method References" può essere riscritto con le lambda
+*       expression. Per esempio, "stream.forEach(System.out::println)" fa la stessa cosa di
+*       "stream.forEach( x -> System.out.println(x) )". Non tutto il codice scritto usando le
+*       lambda può essere riscritto con i "Method References".
+*
+*       Usare il metodo "peek()" per ispezionare/controllare lo "Stream". Il metodo "peek()" è
+*       un "Intermediate Operation". Esegue una lamnda expressione o un "Method References" sull'input
+*       e passa quello stesso input attraverso la pipeline fino al prossimo operatore. E' utile
+*       per stampare quello che passa ad un certo punto dello "Stream".
+*
+*       Cercare uno "Stream". I metodi "findFirst()" e "findAny()" ritornano un singolo elemento
+*       da uno "Stream" in un'oggetto "Optional". I metodo "anyMatch()", "allMatch()" e "noneMatch()"
+*       ritornano un "boolean" (primitiva). Prestare attenzione a questi metodi perché questi tre
+*       possono appendersi (???) si chiamati su uno "Stream" infinito con alcuni dati. Tutti questi
+*       metodo sono "Terminal Operation".
+*
+*       Ordinare uno "Stream". Il metodo "sort()" è una "Intermediate Operation" che ordina uno
+*       "Stream". Queste sono due versioni: la firma con zero parametri che ordina usando l'ordine
+*       naturale, e la firma con un parametro che ordina usando il "Comparator" come ordine di
+*       ordinamento.
+*
+*
+*
+*
 *
 * */
 
