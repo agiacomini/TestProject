@@ -4,7 +4,8 @@ import org.apache.log4j.Logger;
 
 /**
  * 
- * @author com.giacomini.andrea.utilsAndrea
+ * 18 gen 2020
+ * @author A.G							
  * @e-mail andr3a.giacomini@gmail.com
  * @pkg	   com.giacomini.andrea.utils, @prj EffectiveJavaSecondEdition_JoshuaBloch
  *
